@@ -4,6 +4,7 @@
 //
 //  Created by Gabriela Sillis on 29/01/22.
 //
+// swiftlint:disable type_name
 
 import XCTest
 
