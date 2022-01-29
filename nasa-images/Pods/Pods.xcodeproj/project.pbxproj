@@ -1,0 +1,868 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		129899C0EDBB08053BDB37D425CD124A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2C06A60D48C7918DB8A9D85A3784B671 /* Pods-nasa-images-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7911DBC303E9C14B6882249A2055EA9C /* Pods-nasa-images-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DDF01013DF30820AF5BAD6084C92E36 /* Pods-nasa-images-nasa-imagesUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB8BBB010B0B09D11471423D5FB624 /* Pods-nasa-images-nasa-imagesUITests-dummy.m */; };
+		788E7894C67981911456ADB0D9F777CB /* Pods-nasa-images-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B3C6B15DE54244717093783552072 /* Pods-nasa-images-dummy.m */; };
+		8DDC83220EAD6DE1BC54DC5752B21F8C /* Pods-nasa-images-nasa-imagesUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E04EFA482EEC2E532569A720DED2D535 /* Pods-nasa-images-nasa-imagesUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C3D6B350304C5B6B9DCBF2E24E55E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		AEA9F30CEC38DDC2E0C1ACC5A96E9392 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E8036B8E4DEB21C2BDAF19E690464456 /* Pods-nasa-imagesTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0AA690DA2D5E5FDB931D67F0F5986B /* Pods-nasa-imagesTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4E2EEB7F379AA0F37BAD12047C0D930 /* Pods-nasa-imagesTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894B44C06DAC9A2FC28B57E1BB347935 /* Pods-nasa-imagesTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33B103B7D28283D8898DF104CA49BD77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB2771D3AE6307C9C81CFB4C7811208C;
+			remoteInfo = "Pods-nasa-images";
+		};
+		C4BED6CD60C34D0336A4DAD7B285D77C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		D47DE6D7ADDDCC6B2F71A9FC5316F2C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B8CAE7C6E2A44EBC9D576E4E18AF9E3 /* Pods-nasa-images.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nasa-images.debug.xcconfig"; sourceTree = "<group>"; };
+		1D67B7651668C861737BECF85924BE66 /* Pods-nasa-imagesTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nasa-imagesTests"; path = Pods_nasa_imagesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3827F676BFED144A391B21268E693123 /* Pods-nasa-imagesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nasa-imagesTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B0AA690DA2D5E5FDB931D67F0F5986B /* Pods-nasa-imagesTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nasa-imagesTests-umbrella.h"; sourceTree = "<group>"; };
+		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		40943234C3762FB931D784C158BCC671 /* Pods-nasa-images-nasa-imagesUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nasa-images-nasa-imagesUITests-Info.plist"; sourceTree = "<group>"; };
+		52B709D847A94BCD602B8D9C008DDB11 /* Pods-nasa-images-nasa-imagesUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nasa-images-nasa-imagesUITests"; path = Pods_nasa_images_nasa_imagesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		530ACF0B3144541461587DB0F9C09866 /* Pods-nasa-imagesTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nasa-imagesTests-Info.plist"; sourceTree = "<group>"; };
+		5A31CE329A14284910AB82E05C32AF1E /* Pods-nasa-images.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nasa-images.release.xcconfig"; sourceTree = "<group>"; };
+		605B24381A4DCECF3C83F3A28FECE0F1 /* Pods-nasa-images-nasa-imagesUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nasa-images-nasa-imagesUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		64BB8BBB010B0B09D11471423D5FB624 /* Pods-nasa-images-nasa-imagesUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nasa-images-nasa-imagesUITests-dummy.m"; sourceTree = "<group>"; };
+		6911E8CBAC88A99392BAE9887854B068 /* Pods-nasa-images-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nasa-images-acknowledgements.markdown"; sourceTree = "<group>"; };
+		709DC374E3F9B91DF8713F1EDA6E4A3C /* Pods-nasa-images.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nasa-images.modulemap"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7911DBC303E9C14B6882249A2055EA9C /* Pods-nasa-images-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nasa-images-umbrella.h"; sourceTree = "<group>"; };
+		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
+		894B44C06DAC9A2FC28B57E1BB347935 /* Pods-nasa-imagesTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nasa-imagesTests-dummy.m"; sourceTree = "<group>"; };
+		91797EB5A75926BD5AECB7977CC52916 /* Pods-nasa-images-nasa-imagesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nasa-images-nasa-imagesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		955AECBC3D141A0BA87658470E18CC99 /* Pods-nasa-imagesTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nasa-imagesTests.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5A45A5BB1AC7C9AED7CEFCCDC298E6D /* Pods-nasa-imagesTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nasa-imagesTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A79F3DEB47F69F1CBB20A63B0EC08561 /* Pods-nasa-images-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nasa-images-acknowledgements.plist"; sourceTree = "<group>"; };
+		B5C89B409E4DADC25B05EC2C97D9556C /* Pods-nasa-imagesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nasa-imagesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4F61008A72EAD4AA33938ECE5086133 /* Pods-nasa-images-nasa-imagesUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nasa-images-nasa-imagesUITests.modulemap"; sourceTree = "<group>"; };
+		CE3B3C6B15DE54244717093783552072 /* Pods-nasa-images-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nasa-images-dummy.m"; sourceTree = "<group>"; };
+		D1665004A4A4F61D43FA252726D8F52F /* Pods-nasa-images-nasa-imagesUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nasa-images-nasa-imagesUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D51F74C258E3636CD25FC80D6A58AAE7 /* Pods-nasa-imagesTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nasa-imagesTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D5F67A5D11442B3B2032DD3E5B3E3BF1 /* Pods-nasa-images-nasa-imagesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nasa-images-nasa-imagesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7A127A5A4F13C212E2C99B4787F1912 /* Pods-nasa-images */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nasa-images"; path = Pods_nasa_images.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E04EFA482EEC2E532569A720DED2D535 /* Pods-nasa-images-nasa-imagesUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nasa-images-nasa-imagesUITests-umbrella.h"; sourceTree = "<group>"; };
+		E254C4B5EE83FE333C151A3F1686B92D /* Pods-nasa-images-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nasa-images-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		350EFC62394DD5F330AED5C3F9308A50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA9F30CEC38DDC2E0C1ACC5A96E9392 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AF0BD3ED23BA7678BC152C7C0361E1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				129899C0EDBB08053BDB37D425CD124A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CFEE3A3DCD8C27CB3867919EAADCD04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3D6B350304C5B6B9DCBF2E24E55E00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A1BC417828BD1498E1769B32926F5FF /* Pods-nasa-images */ = {
+			isa = PBXGroup;
+			children = (
+				709DC374E3F9B91DF8713F1EDA6E4A3C /* Pods-nasa-images.modulemap */,
+				6911E8CBAC88A99392BAE9887854B068 /* Pods-nasa-images-acknowledgements.markdown */,
+				A79F3DEB47F69F1CBB20A63B0EC08561 /* Pods-nasa-images-acknowledgements.plist */,
+				CE3B3C6B15DE54244717093783552072 /* Pods-nasa-images-dummy.m */,
+				E254C4B5EE83FE333C151A3F1686B92D /* Pods-nasa-images-Info.plist */,
+				7911DBC303E9C14B6882249A2055EA9C /* Pods-nasa-images-umbrella.h */,
+				1B8CAE7C6E2A44EBC9D576E4E18AF9E3 /* Pods-nasa-images.debug.xcconfig */,
+				5A31CE329A14284910AB82E05C32AF1E /* Pods-nasa-images.release.xcconfig */,
+			);
+			name = "Pods-nasa-images";
+			path = "Target Support Files/Pods-nasa-images";
+			sourceTree = "<group>";
+		};
+		0A24102B006FC1AB0E36938B6F16DDB1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A1BC417828BD1498E1769B32926F5FF /* Pods-nasa-images */,
+				AFB87BF57BC18DC79129EFD9514C17C8 /* Pods-nasa-images-nasa-imagesUITests */,
+				27171D1AF1EDFC41FCC72F28875CA512 /* Pods-nasa-imagesTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		27171D1AF1EDFC41FCC72F28875CA512 /* Pods-nasa-imagesTests */ = {
+			isa = PBXGroup;
+			children = (
+				955AECBC3D141A0BA87658470E18CC99 /* Pods-nasa-imagesTests.modulemap */,
+				D51F74C258E3636CD25FC80D6A58AAE7 /* Pods-nasa-imagesTests-acknowledgements.markdown */,
+				A5A45A5BB1AC7C9AED7CEFCCDC298E6D /* Pods-nasa-imagesTests-acknowledgements.plist */,
+				894B44C06DAC9A2FC28B57E1BB347935 /* Pods-nasa-imagesTests-dummy.m */,
+				530ACF0B3144541461587DB0F9C09866 /* Pods-nasa-imagesTests-Info.plist */,
+				3B0AA690DA2D5E5FDB931D67F0F5986B /* Pods-nasa-imagesTests-umbrella.h */,
+				B5C89B409E4DADC25B05EC2C97D9556C /* Pods-nasa-imagesTests.debug.xcconfig */,
+				3827F676BFED144A391B21268E693123 /* Pods-nasa-imagesTests.release.xcconfig */,
+			);
+			name = "Pods-nasa-imagesTests";
+			path = "Target Support Files/Pods-nasa-imagesTests";
+			sourceTree = "<group>";
+		};
+		415F870CBAB678809BCDA9B3857196AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7A127A5A4F13C212E2C99B4787F1912 /* Pods-nasa-images */,
+				52B709D847A94BCD602B8D9C008DDB11 /* Pods-nasa-images-nasa-imagesUITests */,
+				1D67B7651668C861737BECF85924BE66 /* Pods-nasa-imagesTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */,
+				7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D96179D43A67C5D5323B0682D32C133C /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFB87BF57BC18DC79129EFD9514C17C8 /* Pods-nasa-images-nasa-imagesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4F61008A72EAD4AA33938ECE5086133 /* Pods-nasa-images-nasa-imagesUITests.modulemap */,
+				D1665004A4A4F61D43FA252726D8F52F /* Pods-nasa-images-nasa-imagesUITests-acknowledgements.markdown */,
+				605B24381A4DCECF3C83F3A28FECE0F1 /* Pods-nasa-images-nasa-imagesUITests-acknowledgements.plist */,
+				64BB8BBB010B0B09D11471423D5FB624 /* Pods-nasa-images-nasa-imagesUITests-dummy.m */,
+				40943234C3762FB931D784C158BCC671 /* Pods-nasa-images-nasa-imagesUITests-Info.plist */,
+				E04EFA482EEC2E532569A720DED2D535 /* Pods-nasa-images-nasa-imagesUITests-umbrella.h */,
+				D5F67A5D11442B3B2032DD3E5B3E3BF1 /* Pods-nasa-images-nasa-imagesUITests.debug.xcconfig */,
+				91797EB5A75926BD5AECB7977CC52916 /* Pods-nasa-images-nasa-imagesUITests.release.xcconfig */,
+			);
+			name = "Pods-nasa-images-nasa-imagesUITests";
+			path = "Target Support Files/Pods-nasa-images-nasa-imagesUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				965877409E01FB3D85D85E90E6B30185 /* Pods */,
+				415F870CBAB678809BCDA9B3857196AA /* Products */,
+				0A24102B006FC1AB0E36938B6F16DDB1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D2E36AC6D912538390C8803A1C07003 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8036B8E4DEB21C2BDAF19E690464456 /* Pods-nasa-imagesTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEDE8A5818E0DD75B064CEB4B1575B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C06A60D48C7918DB8A9D85A3784B671 /* Pods-nasa-images-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A1A95BD8D936F8B8C22B95A93AC8F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DDC83220EAD6DE1BC54DC5752B21F8C /* Pods-nasa-images-nasa-imagesUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		12F9075E1DD1FFB9C7A9FB83633123D8 /* Pods-nasa-images-nasa-imagesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B498165393A00C8D86E5ED8323CC16 /* Build configuration list for PBXNativeTarget "Pods-nasa-images-nasa-imagesUITests" */;
+			buildPhases = (
+				45A1A95BD8D936F8B8C22B95A93AC8F1 /* Headers */,
+				7C633E4502B11E4B3200C6C9C5898BC0 /* Sources */,
+				9CFEE3A3DCD8C27CB3867919EAADCD04 /* Frameworks */,
+				8ACB8FDC852537722D2DAA4BBE602D81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				302FC7C6C9D0BD2E0960FB54163A0CD3 /* PBXTargetDependency */,
+			);
+			name = "Pods-nasa-images-nasa-imagesUITests";
+			productName = Pods_nasa_images_nasa_imagesUITests;
+			productReference = 52B709D847A94BCD602B8D9C008DDB11 /* Pods-nasa-images-nasa-imagesUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		4D78D34F8A2B7D3F6D21259338798AD5 /* Pods-nasa-imagesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58E8098D9345529A8053BDA4DC342538 /* Build configuration list for PBXNativeTarget "Pods-nasa-imagesTests" */;
+			buildPhases = (
+				1D2E36AC6D912538390C8803A1C07003 /* Headers */,
+				CE08B69E78DD53F4B3D14C22725B47CC /* Sources */,
+				350EFC62394DD5F330AED5C3F9308A50 /* Frameworks */,
+				1B712EB89AFF7C448662800CA8BEE539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AA63B248819F16006D1D0C4478B9FC3 /* PBXTargetDependency */,
+			);
+			name = "Pods-nasa-imagesTests";
+			productName = Pods_nasa_imagesTests;
+			productReference = 1D67B7651668C861737BECF85924BE66 /* Pods-nasa-imagesTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB2771D3AE6307C9C81CFB4C7811208C /* Pods-nasa-images */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6BC322992712321AA1EE55568A0A2A2 /* Build configuration list for PBXNativeTarget "Pods-nasa-images" */;
+			buildPhases = (
+				3BEDE8A5818E0DD75B064CEB4B1575B6 /* Headers */,
+				AA0AC27F4F51B96A9764BE508A6A76FF /* Sources */,
+				8AF0BD3ED23BA7678BC152C7C0361E1C /* Frameworks */,
+				35B2C25FFDD9A05DEA76235198454C36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8BA0608EEA3CB5DE0BC70E188AC255E /* PBXTargetDependency */,
+			);
+			name = "Pods-nasa-images";
+			productName = Pods_nasa_images;
+			productReference = D7A127A5A4F13C212E2C99B4787F1912 /* Pods-nasa-images */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 415F870CBAB678809BCDA9B3857196AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB2771D3AE6307C9C81CFB4C7811208C /* Pods-nasa-images */,
+				12F9075E1DD1FFB9C7A9FB83633123D8 /* Pods-nasa-images-nasa-imagesUITests */,
+				4D78D34F8A2B7D3F6D21259338798AD5 /* Pods-nasa-imagesTests */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B712EB89AFF7C448662800CA8BEE539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35B2C25FFDD9A05DEA76235198454C36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ACB8FDC852537722D2DAA4BBE602D81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C633E4502B11E4B3200C6C9C5898BC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDF01013DF30820AF5BAD6084C92E36 /* Pods-nasa-images-nasa-imagesUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0AC27F4F51B96A9764BE508A6A76FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				788E7894C67981911456ADB0D9F777CB /* Pods-nasa-images-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE08B69E78DD53F4B3D14C22725B47CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E2EEB7F379AA0F37BAD12047C0D930 /* Pods-nasa-imagesTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AA63B248819F16006D1D0C4478B9FC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-nasa-images";
+			target = CB2771D3AE6307C9C81CFB4C7811208C /* Pods-nasa-images */;
+			targetProxy = 33B103B7D28283D8898DF104CA49BD77 /* PBXContainerItemProxy */;
+		};
+		302FC7C6C9D0BD2E0960FB54163A0CD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = C4BED6CD60C34D0336A4DAD7B285D77C /* PBXContainerItemProxy */;
+		};
+		E8BA0608EEA3CB5DE0BC70E188AC255E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = D47DE6D7ADDDCC6B2F71A9FC5316F2C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25CF4FB1EDEB12C2C5E80268F56CEC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A31CE329A14284910AB82E05C32AF1E /* Pods-nasa-images.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nasa-images/Pods-nasa-images-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nasa-images/Pods-nasa-images.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C93DB17A9ADAC21EFCDB21F4BCCB78D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5C89B409E4DADC25B05EC2C97D9556C /* Pods-nasa-imagesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nasa-imagesTests/Pods-nasa-imagesTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nasa-imagesTests/Pods-nasa-imagesTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A445D08D964FE9C6C05CEE2B0A948973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A449B2BE1739A8BDE0AE1E9EFD70E67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B8CAE7C6E2A44EBC9D576E4E18AF9E3 /* Pods-nasa-images.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nasa-images/Pods-nasa-images-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nasa-images/Pods-nasa-images.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AD81E62ACCB0B7A923FC8AA288F9921E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC12908DFBBE480FB9B4709526A785E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3827F676BFED144A391B21268E693123 /* Pods-nasa-imagesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nasa-imagesTests/Pods-nasa-imagesTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nasa-imagesTests/Pods-nasa-imagesTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BEE7948351288F5D61B8DCCEB83E94B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91797EB5A75926BD5AECB7977CC52916 /* Pods-nasa-images-nasa-imagesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D970CE81D33545529FAAC90C322E1F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F67A5D11442B3B2032DD3E5B3E3BF1 /* Pods-nasa-images-nasa-imagesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB7376794D773187B6D048F04E70CE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB7376794D773187B6D048F04E70CE39 /* Debug */,
+				A445D08D964FE9C6C05CEE2B0A948973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58E8098D9345529A8053BDA4DC342538 /* Build configuration list for PBXNativeTarget "Pods-nasa-imagesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C93DB17A9ADAC21EFCDB21F4BCCB78D /* Debug */,
+				BC12908DFBBE480FB9B4709526A785E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B498165393A00C8D86E5ED8323CC16 /* Build configuration list for PBXNativeTarget "Pods-nasa-images-nasa-imagesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D970CE81D33545529FAAC90C322E1F45 /* Debug */,
+				BEE7948351288F5D61B8DCCEB83E94B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */,
+				AD81E62ACCB0B7A923FC8AA288F9921E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6BC322992712321AA1EE55568A0A2A2 /* Build configuration list for PBXNativeTarget "Pods-nasa-images" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A449B2BE1739A8BDE0AE1E9EFD70E67F /* Debug */,
+				25CF4FB1EDEB12C2C5E80268F56CEC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
