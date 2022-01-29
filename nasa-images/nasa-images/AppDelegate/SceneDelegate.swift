@@ -13,8 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let service = NasaImagesService()
+        let viewModel = NasaImagesViewModel(service: service)
         let window = UIWindow(windowScene: windowScene)
-        let viewController = ViewController()
+        let viewController = ViewController(viewModel: viewModel)
         let navVc = UINavigationController(rootViewController: viewController)
         window.rootViewController = navVc
         window.makeKeyAndVisible()

@@ -18,6 +18,11 @@
 		C58EAAD927A59EAE0016DEA7 /* nasa_imagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAD827A59EAE0016DEA7 /* nasa_imagesTests.swift */; };
 		C58EAAE327A59EAE0016DEA7 /* nasa_imagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAE227A59EAE0016DEA7 /* nasa_imagesUITests.swift */; };
 		C58EAAE527A59EAE0016DEA7 /* nasa_imagesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAE427A59EAE0016DEA7 /* nasa_imagesUITestsLaunchTests.swift */; };
+		C58EAAF727A5A3D10016DEA7 /* AstronomyImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAF627A5A3D10016DEA7 /* AstronomyImagesModel.swift */; };
+		C58EAAFA27A5A4530016DEA7 /* NasaImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAF927A5A4530016DEA7 /* NasaImagesService.swift */; };
+		C58EAAFC27A5A6EE0016DEA7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAFB27A5A6EE0016DEA7 /* Constants.swift */; };
+		C58EAB0027A5AD100016DEA7 /* NasaImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAFF27A5AD100016DEA7 /* NasaImagesViewModel.swift */; };
+		C58EAB0227A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAB0127A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,11 @@
 		C58EAADE27A59EAE0016DEA7 /* nasa-imagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nasa-imagesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58EAAE227A59EAE0016DEA7 /* nasa_imagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nasa_imagesUITests.swift; sourceTree = "<group>"; };
 		C58EAAE427A59EAE0016DEA7 /* nasa_imagesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nasa_imagesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C58EAAF627A5A3D10016DEA7 /* AstronomyImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImagesModel.swift; sourceTree = "<group>"; };
+		C58EAAF927A5A4530016DEA7 /* NasaImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesService.swift; sourceTree = "<group>"; };
+		C58EAAFB27A5A6EE0016DEA7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C58EAAFF27A5AD100016DEA7 /* NasaImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesViewModel.swift; sourceTree = "<group>"; };
+		C58EAB0127A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesViewModelProtocol.swift; sourceTree = "<group>"; };
 		D2F40F63FE70DE1B29633F70 /* Pods-nasa-images.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasa-images.debug.xcconfig"; path = "Target Support Files/Pods-nasa-images/Pods-nasa-images.debug.xcconfig"; sourceTree = "<group>"; };
 		F547A3E3CDA218D18F252788 /* Pods-nasa-imagesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasa-imagesTests.release.xcconfig"; path = "Target Support Files/Pods-nasa-imagesTests/Pods-nasa-imagesTests.release.xcconfig"; sourceTree = "<group>"; };
 		F54C55F0A80DB187DCD8D6D9 /* Pods_nasa_images_nasa_imagesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nasa_images_nasa_imagesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +147,10 @@
 		C58EAAC027A59EAC0016DEA7 /* nasa-images */ = {
 			isa = PBXGroup;
 			children = (
+				C58EAAFD27A5AB4B0016DEA7 /* Utils */,
+				C58EAAFE27A5ACF00016DEA7 /* ViewModel */,
+				C58EAAF827A5A4320016DEA7 /* Service */,
+				C58EAAF527A5A3A40016DEA7 /* Model */,
 				C58EAAF127A59ECD0016DEA7 /* AppDelegate */,
 				C58EAAF227A59ED50016DEA7 /* View */,
 				C58EAAF327A59EE40016DEA7 /* Resources */,
@@ -186,6 +200,39 @@
 				C58EAACC27A59EAE0016DEA7 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C58EAAF527A5A3A40016DEA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C58EAAF627A5A3D10016DEA7 /* AstronomyImagesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C58EAAF827A5A4320016DEA7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C58EAAF927A5A4530016DEA7 /* NasaImagesService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C58EAAFD27A5AB4B0016DEA7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C58EAAFB27A5A6EE0016DEA7 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C58EAAFE27A5ACF00016DEA7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C58EAAFF27A5AD100016DEA7 /* NasaImagesViewModel.swift */,
+				C58EAB0127A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,9 +455,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58EAAF727A5A3D10016DEA7 /* AstronomyImagesModel.swift in Sources */,
+				C58EAB0227A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift in Sources */,
 				C58EAAC627A59EAC0016DEA7 /* ViewController.swift in Sources */,
+				C58EAAFA27A5A4530016DEA7 /* NasaImagesService.swift in Sources */,
 				C58EAAC227A59EAC0016DEA7 /* AppDelegate.swift in Sources */,
+				C58EAB0027A5AD100016DEA7 /* NasaImagesViewModel.swift in Sources */,
 				C58EAAC427A59EAC0016DEA7 /* SceneDelegate.swift in Sources */,
+				C58EAAFC27A5A6EE0016DEA7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
