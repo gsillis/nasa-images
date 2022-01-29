@@ -14,7 +14,7 @@ enum NetworkError: Error {
     case custom(error: Error)
 }
 
-typealias  AstrononyImages = Result<[AstronomyImages], NetworkError>
+typealias  AstrononyImages = Result<AstronomyImages, NetworkError>
 
 protocol NasaImagesServiceProtocol {
     func fetchAstronomyImages(completion: @escaping (AstrononyImages) -> Void)
@@ -40,7 +40,7 @@ final class NasaImagesService: NasaImagesServiceProtocol {
             }
 
             do {
-                let result = try JSONDecoder().decode([AstronomyImages].self, from: dataResult)
+                let result = try JSONDecoder().decode(AstronomyImages.self, from: dataResult)
                 completion(.success(result))
             } catch let error {
                 completion(.failure(NetworkError.custom(error: error)))
