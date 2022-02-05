@@ -1,0 +1,57 @@
+//
+//  images.json
+//  nasa-imagesTests
+//
+//  Created by Gabriela Sillis on 05/02/22.
+//
+
+[
+  {
+    "url": "https://images-assets.nasa.gov/image/PIA15415/PIA15415~medium.jpg",
+    "name": "Cygnus Loop Nebula",
+    "detail": "Wispy tendrils of hot dust and gas glow brightly in this ultraviolet image of the Cygnus Loop nebula, taken by NASA Galaxy Evolution Explorer. The nebula lies about 1,500 light-years away.",
+    "id": "1"
+  },
+  {
+    "url": "https://images-assets.nasa.gov/image/PIA09178/PIA09178~medium.jpg",
+    "name": "Comets Kick up Dust in Helix Nebula",
+    "detail": "This infrared image from NASA Spitzer Space Telescope shows the Helix nebula, a cosmic starlet often photographed by amateur astronomers for its vivid colors and eerie resemblance to a giant eye.",
+    "id": "2"
+  },
+  {
+    "url": "https://images-assets.nasa.gov/image/PIA16008/PIA16008~medium.jpg",
+    "name": "Hubble Sees a Horsehead of a Different Color",
+    "detail": "Backlit wisps along the Horsehead Nebula upper ridge are being illuminated by Sigma Orionis, a young five-star system just off the top of this image from the Hubble Space Telescope.",
+    "id": "3"
+  },
+  {
+    "url": "https://images-assets.nasa.gov/image/PIA17564/PIA17564~medium.jpg",
+    "name": "March of Asteroids Across Dying Star",
+    "detail": "A dying star, called the Helix nebula, is shown surrounded by the tracks of asteroids in an image captured by NASA WISE. Skirting around the edges of the Helix nebula are the footprints of asteroids marching across the field of view",
+    "id": "4"
+  },
+  {
+    "url": "https://images-assets.nasa.gov/image/PIA03545/PIA03545~medium.jpg",
+    "name": "Chaotic Star Birth",
+    "detail": "Located 1,000 light years from Earth in the constellation Perseus, a reflection nebula called NGC 1333 epitomizes the beautiful chaos of a dense group of stars being born. This image is from NASA Spitzer Space Telescope.",
+    "id": "5"
+  },
+  {
+    "url": "https://images-assets.nasa.gov/image/hubbles-blue-bubble_24908262259_o/hubbles-blue-bubble_24908262259_o~small.jpg",
+    "name": "Blue bubble in Carina",
+    "detail": "Sparkling at the centre of this beautiful NASA/ESA Hubble Space Telescope image is a Wolfâ€“Rayet star known as WR 31a, located about 30 000 light-years away in the constellation of Carina (The Keel). The distinctive blue bubble appearing to encircle WR 31a, and its uncatalogued stellar sidekick, is a Wolfâ€“Rayet nebula â€” an interstellar cloud of dust, hydrogen, helium and other gases. Created when speedy stellar winds interact with the outer layers of hydrogen ejected by Wolfâ€“Rayet stars, these nebulae are frequently ring-shaped or spherical. The bubble â€” estimated to have formed around 20 000 years ago â€” is expanding at a rate of around 220 000 kilometres per hour! Unfortunately, the lifecycle of a Wolfâ€“Rayet star is only a few hundred thousand years â€” the blink of an eye in cosmic terms. Despite beginning life with a mass at least 20 times that of the Sun, Wolfâ€“Rayet stars typically lose half their mass in less than 100 000 years. And WR 31a is no exception to this case. It will, therefore, eventually end its life as a spectacular supernova, and the stellar material expelled from its explosion will later nourish a new generation of stars and planets.",
+    "id": "6"
+  },
+  {
+    "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000401/GSFC_20171208_Archive_e000401~small.jpg",
+    "name": "Hubble and a Stellar Fingerprint",
+    "detail": "Showcased at the center of this NASA/ESA Hubble Space Telescope image is an emission-line star known as IRAS 12196-6300. Located just under 2,300 light-years from Earth, this star displays prominent emission lines, meaning that the starâ€™s light, dispersed into a spectrum, shows up as a rainbow of colors marked with a characteristic pattern of dark and bright lines. The characteristics of these lines, when compared to the â€œfingerprintsâ€ left by particular atoms and molecules, can be used to reveal IRAS 12196-6300â€™s chemical composition. Under 10 million years old and not yet burning hydrogen at its core, unlike the sun, this star is still in its infancy. Further evidence of IRAS 12196-6300â€™s youth is provided by the presence of reflection nebulae. These hazy clouds, pictured floating above and below IRAS 12196-6300, are created when light from a star reflects off a high concentration of nearby dust, such as the dusty material still remaining from IRAS 12196-6300â€™s formation.",
+    "id": "7"
+  },
+  {
+    "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000389/GSFC_20171208_Archive_e000389~small.jpg",
+    "name": "Hubble Peers at a Distinctly Disorganized Dwarf Galaxy",
+    "detail": "Despite being less famous than their elliptical and spiral galactic cousins, irregular dwarf galaxies, such as the one captured in this NASA/ESA Hubble Space Telescope image, are actually one of the most common types of galaxy in the universe. Known as UGC 4459, this dwarf galaxy is located approximately 11 million light-years away in the constellation of Ursa Major (The Great Bear), a constellation that is also home to the Pinwheel Galaxy (M101), the Owl Nebula (M97), Messier 81, Messier 82 and several other galaxies all part of the M81 group. UGC 4459â€™s diffused and disorganized appearance is characteristic of an irregular dwarf galaxy. Lacking a distinctive structure or shape, irregular dwarf galaxies are often chaotic in appearance, with neither a nuclear bulge â€” a huge, tightly packed central group of stars â€” nor any trace of spiral arms â€” regions of stars extending from the center of the galaxy. Astronomers suspect that some irregular dwarf galaxies were once spiral or elliptical galaxies, but were later deformed by the gravitational pull of nearby objects. Rich with young blue stars and older red stars, UGC 4459 has a stellar population of several billion. Though seemingly impressive, this is small when compared to the 200 to 400 billion stars in the Milky Way! Observations with Hubble have shown that because of their low masses of dwarf galaxies like UGC 4459, star formation is very low compared to larger galaxies. Only very little of their original gas has been turned into stars. Thus, these small galaxies are interesting to study to better understand primordial environments and the star formation process",
+    "id": "8"
+  }
+]
