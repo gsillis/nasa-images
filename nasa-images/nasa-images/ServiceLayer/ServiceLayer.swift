@@ -16,18 +16,19 @@ enum NetworkError: Error {
 
 typealias  AstrononyImages = Result<AstronomyImages, NetworkError>
 
-protocol NasaImagesServiceProtocol {
-    func fetchAstronomyImages(completion: @escaping (AstrononyImages) -> Void)
+protocol ServiceLayerProtocol {
+    func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImages) -> Void)
 }
 
-final class NasaImagesService: NasaImagesServiceProtocol {
-    func fetchAstronomyImages(completion: @escaping (AstrononyImages) -> Void) {
-        guard let url = URL(string: Constants.urlPath) else {
-            completion(.failure(NetworkError.invalidURL))
-            return
-        }
+final class ServiceLayer: ServiceLayerProtocol {
+    let urlSession: URLSession
 
-        let urlSession = URLSession.shared
+    init(urlSession: URLSession = .shared) {
+        self.urlSession = urlSession
+    }
+
+    func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImages) -> Void) {
+
         urlSession.dataTask(with: url) { astrononyImages, _, error in
             if let error = error {
                 completion(.failure(NetworkError.custom(error: error)))

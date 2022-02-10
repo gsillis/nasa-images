@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let service = NasaImagesService()
+        let service = NasaImagesService(serviceLayer: ServiceLayer())
         let viewModel = NasaImagesViewModel(service: service)
         let window = UIWindow(windowScene: windowScene)
         let viewController = ViewController(viewModel: viewModel)
