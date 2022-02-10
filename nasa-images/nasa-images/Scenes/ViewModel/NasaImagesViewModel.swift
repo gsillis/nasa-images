@@ -18,14 +18,8 @@ final class NasaImagesViewModel {
     private func fetchNasaImages() async throws -> AstronomyImages {
         let images: AstronomyImages = try await withCheckedThrowingContinuation({ continuation in
 
-            service.fetchAstronomyImages { result in
-
-                switch result {
-                case .success(let images):
-                    continuation.resume(returning: images)
-                case .failure(let error):
-                    continuation.resume(throwing: error)
-                }
+            service.fetchImages { images in
+                continuation.resume(returning: images)
             }
         })
         return images

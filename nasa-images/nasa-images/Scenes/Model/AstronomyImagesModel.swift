@@ -9,6 +9,6 @@ import Foundation
 
 typealias AstronomyImages = [AstronomyImagesModel]
 
-struct AstronomyImagesModel: Decodable {
+struct AstronomyImagesModel: Decodable, Equatable {
     let url, name, detail, id: String?
 }
