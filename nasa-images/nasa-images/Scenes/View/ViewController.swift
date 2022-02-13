@@ -123,17 +123,24 @@ class ViewController: UIViewController {
 	private func createNebulaCollectSection() -> NSCollectionLayoutSection {
 		let itemSize = NSCollectionLayoutSize(
 			widthDimension: .fractionalWidth(1),
-			heightDimension: .fractionalHeight(0.2)
+			heightDimension: .fractionalHeight(1)
 		)
 		let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+		layoutItem.contentInsets = NSDirectionalEdgeInsets(
+			top: 0,
+			leading: 0,
+			bottom: 0,
+			trailing: 0
+			)
 		let layoutGroupSize = NSCollectionLayoutSize(
 			widthDimension: .fractionalWidth(0.9),
-			heightDimension: .estimated(200)
+			heightDimension: .estimated(350)
 		)
 		let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
 		let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
 		let header = createSectionHeader()
 		layoutSection.boundarySupplementaryItems = [header]
+		layoutSection.orthogonalScrollingBehavior = .groupPagingCentered
 		return layoutSection
 	}
 	
@@ -152,7 +159,8 @@ class ViewController: UIViewController {
 	
 	private func configureSubviews() {
 		view.addSubview(collectionView)
-		collectionView.translatesAutoresizingMaskIntoConstraints = false 
+		collectionView.translatesAutoresizingMaskIntoConstraints = false
+		collectionView.backgroundColor = .customDarkBlue
 	}
 	
 	private func configureConstraints() {
