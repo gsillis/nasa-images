@@ -21,7 +21,6 @@ final class NebulaCollectionCell: UICollectionViewCell {
 		image.layer.borderWidth = 3
 		image.layer.borderColor = UIColor.customBlue.cgColor
 		image.clipsToBounds = true
-		image.image = UIImage(named: "nebula")
 		image.contentMode = .scaleAspectFill
 		return image
 	}()
@@ -29,7 +28,6 @@ final class NebulaCollectionCell: UICollectionViewCell {
 	private lazy var titleLabel: UILabel = {
 		let label = UILabel()
 		label.font = .systemFont(ofSize: 14, weight: .regular)
-		label.text = "TESTE"
 		label.textColor = .white
 		return label
 	}()
@@ -71,6 +69,12 @@ final class NebulaCollectionCell: UICollectionViewCell {
 extension NebulaCollectionCell: NebulaCollectionCellProtocol {
 	func configure(with model: ImageModel) {
 		titleLabel.text = model.name
+		if let url = URL(string: (model.url ?? "")) {
+			let data = try? Data(contentsOf: url)
+			DispatchQueue.main.async {
+				self.cellIMageView.image = UIImage(data: data!)
+			}
+		}
 	}
 }
 
