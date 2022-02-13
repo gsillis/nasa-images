@@ -19,7 +19,7 @@
 		C585CFD927AEBA57000FB07F /* NasaImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585CFD827AEBA57000FB07F /* NasaImagesService.swift */; };
 		C58EAAC227A59EAC0016DEA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC127A59EAC0016DEA7 /* AppDelegate.swift */; };
 		C58EAAC427A59EAC0016DEA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC327A59EAC0016DEA7 /* SceneDelegate.swift */; };
-		C58EAAC627A59EAC0016DEA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC527A59EAC0016DEA7 /* ViewController.swift */; };
+		C58EAAC627A59EAC0016DEA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC527A59EAC0016DEA7 /* HomeViewController.swift */; };
 		C58EAACB27A59EAE0016DEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C58EAACA27A59EAE0016DEA7 /* Assets.xcassets */; };
 		C58EAACE27A59EAE0016DEA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58EAACC27A59EAE0016DEA7 /* LaunchScreen.storyboard */; };
 		C58EAAD927A59EAE0016DEA7 /* ServiceLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAD827A59EAE0016DEA7 /* ServiceLayerTest.swift */; };
@@ -80,7 +80,7 @@
 		C58EAABE27A59EAC0016DEA7 /* nasa-images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nasa-images.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58EAAC127A59EAC0016DEA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58EAAC327A59EAC0016DEA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C58EAAC527A59EAC0016DEA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C58EAAC527A59EAC0016DEA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C58EAACA27A59EAE0016DEA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C58EAACD27A59EAE0016DEA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C58EAACF27A59EAE0016DEA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		C58EAAF227A59ED50016DEA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C58EAAC527A59EAC0016DEA7 /* ViewController.swift */,
+				C58EAAC527A59EAC0016DEA7 /* HomeViewController.swift */,
 				C564B15227B83F40008ABA28 /* Cell */,
 			);
 			path = View;
@@ -520,7 +520,7 @@
 				C58EAB0227A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift in Sources */,
 				C55715DC27B811E100BE807C /* Preview.swift in Sources */,
 				C585CFD927AEBA57000FB07F /* NasaImagesService.swift in Sources */,
-				C58EAAC627A59EAC0016DEA7 /* ViewController.swift in Sources */,
+				C58EAAC627A59EAC0016DEA7 /* HomeViewController.swift in Sources */,
 				C58EAAFA27A5A4530016DEA7 /* ServiceLayer.swift in Sources */,
 				C55715DE27B812FE00BE807C /* NebulaCollectionCell.swift in Sources */,
 				C564B15427B83F61008ABA28 /* SectionCollectionCell.swift in Sources */,

@@ -6,6 +6,10 @@
 
 import UIKit
 
+protocol NebulaCollectionCellProtocol {
+	func configure(with model: ImageModel)
+}
+
 final class NebulaCollectionCell: UICollectionViewCell {
 	static var identifier: String {
 		return String(describing: NebulaCollectionCell.self)
@@ -59,8 +63,14 @@ final class NebulaCollectionCell: UICollectionViewCell {
 			stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
 			stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
 			stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-			stackView.heightAnchor.constraint(equalToConstant: 300)
+			titleLabel.heightAnchor.constraint(equalToConstant: 16)
 		])
+	}
+}
+
+extension NebulaCollectionCell: NebulaCollectionCellProtocol {
+	func configure(with model: ImageModel) {
+		titleLabel.text = model.name
 	}
 }
 

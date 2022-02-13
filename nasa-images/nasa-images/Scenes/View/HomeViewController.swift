@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 	
 	private typealias UserDataSource = UICollectionViewDiffableDataSource<SectionsModel, ImageModel>
 	private typealias SnapshotData = NSDiffableDataSourceSnapshot<SectionsModel, ImageModel>
 		
 	private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
 	private lazy var dataSource: UserDataSource = createDataSource()
-	private var sections: [SectionsModel]?
+	
 	private var viewModel: NasaImagesViewModelProtocol
 	
 	init(viewModel: NasaImagesViewModelProtocol) {
@@ -31,9 +31,6 @@ class ViewController: UIViewController {
 		view.backgroundColor = .customDarkBlue
 		viewModel.viewDidLoad()
 		configureSubviews()
-		configureConstraints()
-		registerCollectionViewCell()
-		createHeader()
 		bindUI()
 	}
 	
@@ -56,7 +53,7 @@ class ViewController: UIViewController {
 	
 	private func reloadSnapshotData() {
 		var snapShot = SnapshotData()
-		guard let section = viewModel.nebulaImages?.result else { return }
+		guard let section = viewModel.astronomyImagesResult?.result else { return }
 		snapShot.appendSections(section)
 		section.forEach { section in
 			guard let item = section.nebula else { return }
@@ -67,7 +64,7 @@ class ViewController: UIViewController {
 	
 	private func createHeader() {
 		dataSource.supplementaryViewProvider = { [weak self] collectionview, kind, indexpath in
-			let sections = self?.viewModel.nebulaImages?.result?[indexpath.section].section
+			let sections = self?.viewModel.astronomyImagesResult?.result?[indexpath.section].section
 			switch sections {
 			case "Nebula":
 				guard let sectionHeader = collectionview.dequeueReusableSupplementaryView(
@@ -90,7 +87,7 @@ class ViewController: UIViewController {
 	
 	private func createCompositionalLayout() -> UICollectionViewLayout {
 		let layout = UICollectionViewCompositionalLayout { [weak self] sectionIndex, _ in
-			let section = self?.viewModel.nebulaImages?.result?[sectionIndex]
+			let section = self?.viewModel.astronomyImagesResult?.result?[sectionIndex]
 			switch section?.section {
 			default:
 				return self?.createNebulaCollectSection()
@@ -108,12 +105,15 @@ class ViewController: UIViewController {
 			for: indexPath) as? NebulaCollectionCell else {
 				return UICollectionViewCell()
 			}
+		if let model = viewModel.imagesResult?[indexPath.row] {
+			cell.configure(with: model)
+		}
 		return cell
 	}
 	
 	private func createDataSource() -> UserDataSource {
 		UserDataSource(collectionView: collectionView) { [weak self] _, indexPath, _ in
-			switch self?.viewModel.nebulaImages?.result?[indexPath.section].section {
+			switch self?.viewModel.astronomyImagesResult?.result?[indexPath.section].section {
 			default:
 				return self?.createCustomCell(indexPath: indexPath)
 			}
@@ -134,7 +134,7 @@ class ViewController: UIViewController {
 			)
 		let layoutGroupSize = NSCollectionLayoutSize(
 			widthDimension: .fractionalWidth(0.9),
-			heightDimension: .estimated(350)
+			heightDimension: .estimated(400)
 		)
 		let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
 		let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
@@ -159,11 +159,14 @@ class ViewController: UIViewController {
 	
 	private func configureSubviews() {
 		view.addSubview(collectionView)
-		collectionView.translatesAutoresizingMaskIntoConstraints = false
 		collectionView.backgroundColor = .customDarkBlue
+		configureConstraints()
+		registerCollectionViewCell()
+		createHeader()
 	}
 	
 	private func configureConstraints() {
+		collectionView.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate([
 			collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
 			collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),

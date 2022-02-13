@@ -11,12 +11,16 @@ final class NasaImagesViewModel {
 	private var service: NasaImagesServiceProtocol
 	var reloadCollectionView: (() -> Void)?
 	
-	var nebulaImages: AstronomyImagesModel? {
+	var astronomyImagesResult: AstronomyImagesModel? {
 		didSet {
 			reloadCollectionView?()
 		}
 	}
-		
+	
+	var imagesResult: [ImageModel]? {
+		return astronomyImagesResult?.result?.first?.nebula
+	}
+	
 	init(service: NasaImagesServiceProtocol) {
 		self.service = service
 	}
@@ -39,7 +43,7 @@ final class NasaImagesViewModel {
 		Task {
 			do {
 				let images = try await fetchNasaImages()
-				nebulaImages = images
+				astronomyImagesResult = images
 			} catch {
 				print("Request failed with error: \(error)")
 			}
