@@ -14,10 +14,10 @@ enum NetworkError: Error {
     case custom(error: Error)
 }
 
-typealias  AstrononyImages = Result<AstronomyImages, NetworkError>
+typealias  AstrononyImagesResult = Result<AstronomyImages, NetworkError>
 
 protocol ServiceLayerProtocol {
-    func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImages) -> Void)
+    func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImagesResult) -> Void)
 }
 
 final class ServiceLayer: ServiceLayerProtocol {
@@ -27,7 +27,7 @@ final class ServiceLayer: ServiceLayerProtocol {
         self.urlSession = urlSession
     }
 
-    func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImages) -> Void) {
+    func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImagesResult) -> Void) {
 
         urlSession.dataTask(with: url) { astrononyImages, _, error in
             if let error = error {

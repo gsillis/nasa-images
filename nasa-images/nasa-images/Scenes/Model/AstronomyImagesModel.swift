@@ -9,6 +9,11 @@ import Foundation
 
 typealias AstronomyImages = [AstronomyImagesModel]
 
-struct AstronomyImagesModel: Decodable, Equatable {
+struct AstronomyImagesModel: Decodable, Hashable {
     let url, name, detail, id: String?
+    let identifier: UUID = UUID()
+    
+    private enum CodingKeys: String, CodingKey {
+        case url, name, detail, id
+    }
 }

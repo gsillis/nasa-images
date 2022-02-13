@@ -11,15 +11,18 @@ import XCTest
 class ServiceLayerTest: XCTestCase {
 
     func test_should_complete_with_correct_url() {
+        // given
         let url = makeURL()
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: configuration)
         let sut = ServiceLayer(urlSession: session)
+        // when
         sut.fetchAstronomyImages(url: url) { _ in }
 
         let exp = expectation(description: "waiting")
         URLProtocolStub.observerRequest { request in
+            // then
             XCTAssertEqual(url, request.url)
             exp.fulfill()
         }

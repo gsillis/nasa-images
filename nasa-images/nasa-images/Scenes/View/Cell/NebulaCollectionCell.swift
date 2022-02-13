@@ -60,7 +60,6 @@ final class NebulaCollectionCell: UICollectionViewCell {
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
             stackView.widthAnchor.constraint(equalToConstant: 211),
             stackView.heightAnchor.constraint(equalToConstant: 300)
-            
         ])
     }
 }
