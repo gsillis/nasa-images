@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NasaImagesViewModelProtocol {
-    func viewDidLoad()
+	func viewDidLoad()
 	var nebulaImages: AstronomyImages? { get }
 	var reloadCollectionView: (() -> Void)? { get set}
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 final class NasaImagesViewModel {
-    private var service: NasaImagesServiceProtocol
+	private var service: NasaImagesServiceProtocol
 	var reloadCollectionView: (() -> Void)?
 	
 	var nebulaImages: AstronomyImages? {
@@ -17,36 +17,36 @@ final class NasaImagesViewModel {
 		}
 	}
 	
-
-    init(service: NasaImagesServiceProtocol) {
-        self.service = service
-    }
-
 	
-    private func fetchNasaImages() async throws -> AstronomyImages {
-        let images: AstronomyImages = try await withCheckedThrowingContinuation({ continuation in
-
-            service.fetchImages { images in
-                continuation.resume(returning: images)
-            }
-        })
-        return images
-    }
-
-   private func images() {
-        Task {
-            do {
-                let images = try await fetchNasaImages()
+	init(service: NasaImagesServiceProtocol) {
+		self.service = service
+	}
+	
+	
+	private func fetchNasaImages() async throws -> AstronomyImages {
+		let images: AstronomyImages = try await withCheckedThrowingContinuation({ continuation in
+			
+			service.fetchImages { images in
+				continuation.resume(returning: images)
+			}
+		})
+		return images
+	}
+	
+	private func images() {
+		Task {
+			do {
+				let images = try await fetchNasaImages()
 				nebulaImages = images
-            } catch {
-                print("Request failed with error: \(error)")
-            }
-        }
-    }
+			} catch {
+				print("Request failed with error: \(error)")
+			}
+		}
+	}
 }
 
 extension NasaImagesViewModel: NasaImagesViewModelProtocol {
-    func viewDidLoad() {
-        images()
-    }
+	func viewDidLoad() {
+		images()
+	}
 }
