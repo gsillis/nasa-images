@@ -28,8 +28,9 @@ final class ServiceLayer: ServiceLayerProtocol {
     }
 
     func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImagesResult) -> Void) {
-
-        urlSession.dataTask(with: url) { astrononyImages, _, error in
+		var urlResquest = URLRequest(url: url)
+		urlResquest.httpMethod = "GET"
+        urlSession.dataTask(with: urlResquest) { astrononyImages, _, error in
             if let error = error {
                 completion(.failure(NetworkError.custom(error: error)))
                 return

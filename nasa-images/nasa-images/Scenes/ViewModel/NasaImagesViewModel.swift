@@ -9,12 +9,20 @@ import Foundation
 
 final class NasaImagesViewModel {
     private var service: NasaImagesServiceProtocol
-    private var astronomyImages: AstronomyImages?
+	var reloadCollectionView: (() -> Void)?
+	
+	var nebulaImages: AstronomyImages? {
+		didSet {
+			reloadCollectionView?()
+		}
+	}
+	
 
     init(service: NasaImagesServiceProtocol) {
         self.service = service
     }
 
+	
     private func fetchNasaImages() async throws -> AstronomyImages {
         let images: AstronomyImages = try await withCheckedThrowingContinuation({ continuation in
 
@@ -29,7 +37,7 @@ final class NasaImagesViewModel {
         Task {
             do {
                 let images = try await fetchNasaImages()
-                astronomyImages = images
+				nebulaImages = images
             } catch {
                 print("Request failed with error: \(error)")
             }
