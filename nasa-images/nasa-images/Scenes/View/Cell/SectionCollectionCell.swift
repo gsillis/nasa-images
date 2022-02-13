@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SectionCollectionCellProtocol {
+	func configure(with title: String)
+}
+
 final class SectionCollectionCell: UICollectionViewCell {
 	static var identifier: String {
 		return String(describing: SectionCollectionCell.self)
@@ -17,7 +21,6 @@ final class SectionCollectionCell: UICollectionViewCell {
 		label.translatesAutoresizingMaskIntoConstraints = false
 		label.textColor = .customBlue
 		label.font = .systemFont(ofSize: 24, weight: .semibold)
-		label.text = "TESTE"
 		label.textAlignment = .left
 		return label
 	}()
@@ -44,6 +47,12 @@ final class SectionCollectionCell: UICollectionViewCell {
 			titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
 			titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
 		])
+	}
+}
+
+extension SectionCollectionCell: SectionCollectionCellProtocol {
+	func configure(with title: String) {
+		titleLabel.text = title
 	}
 }
 

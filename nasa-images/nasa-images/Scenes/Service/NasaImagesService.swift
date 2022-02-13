@@ -11,7 +11,7 @@ protocol NasaImagesServiceProtocol {
 	func fetchImages(completion: @escaping (AstrononyImagesResult) -> Void )
 }
 
-class NasaImagesService: NasaImagesServiceProtocol {
+final class NasaImagesService: NasaImagesServiceProtocol {
 	
 	private let serviceLayer: ServiceLayerProtocol
 	

@@ -8,18 +8,21 @@
 import Foundation
 
 protocol Model: Decodable, Hashable {}
-typealias NebulaImagesModel = NebulaImagesSections
 
-struct NebulaImagesSections: Model {
-	let section: String?
+struct AstronomyImagesModel: Model {
+	let result: [SectionsModel]?
 	let identifier: UUID = UUID()
-	let nebula: [NebulaImages]?
 	
 	private enum CodingKeys: String, CodingKey {
-		case section, nebula
+		case result
 	}
 }
 
-struct NebulaImages: Model {
+struct SectionsModel: Model {
+	let section: String?
+	let nebula: [ImageModel]?
+}
+
+struct ImageModel: Model {
 	let url, name, detail, id: String?
 }

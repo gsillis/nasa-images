@@ -11,20 +11,18 @@ final class NasaImagesViewModel {
 	private var service: NasaImagesServiceProtocol
 	var reloadCollectionView: (() -> Void)?
 	
-	var nebulaImages: NebulaImagesModel? {
+	var nebulaImages: AstronomyImagesModel? {
 		didSet {
 			reloadCollectionView?()
 		}
 	}
-	
-	
+		
 	init(service: NasaImagesServiceProtocol) {
 		self.service = service
 	}
 	
-	
-	private func fetchNasaImages() async throws -> NebulaImagesModel {
-		let images: NebulaImagesModel = try await withCheckedThrowingContinuation({ continuation in
+	private func fetchNasaImages() async throws -> AstronomyImagesModel {
+		let images: AstronomyImagesModel = try await withCheckedThrowingContinuation({ continuation in
 			service.fetchImages { images in
 				switch images {
 				case .success(let result):

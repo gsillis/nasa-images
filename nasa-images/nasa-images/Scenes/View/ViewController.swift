@@ -8,16 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-	private enum Section {
-		case main
-	}
 	
-	private typealias UserDataSource = UICollectionViewDiffableDataSource<Section, NebulaImagesModel>
-	private typealias SnapshotData = NSDiffableDataSourceSnapshot<Section, NebulaImagesModel>
-	
+	private typealias UserDataSource = UICollectionViewDiffableDataSource<SectionsModel, ImageModel>
+	private typealias SnapshotData = NSDiffableDataSourceSnapshot<SectionsModel, ImageModel>
+		
 	private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
 	private lazy var dataSource: UserDataSource = createDataSource()
-	
+	private var sections: [SectionsModel]?
 	private var viewModel: NasaImagesViewModelProtocol
 	
 	init(viewModel: NasaImagesViewModelProtocol) {
@@ -36,6 +33,7 @@ class ViewController: UIViewController {
 		configureSubviews()
 		configureConstraints()
 		registerCollectionViewCell()
+		createHeader()
 		bindUI()
 	}
 	
@@ -58,28 +56,50 @@ class ViewController: UIViewController {
 	
 	private func reloadSnapshotData() {
 		var snapShot = SnapshotData()
-		snapShot.appendSections([.main])
-		snapShot.appendItems([viewModel.nebulaImages!])
+		guard let section = viewModel.nebulaImages?.result else { return }
+		snapShot.appendSections(section)
+		section.forEach { section in
+			guard let item = section.nebula else { return }
+			snapShot.appendItems(item, toSection: section)
+		}
 		dataSource.apply(snapShot)
 	}
 	
 	private func createHeader() {
 		dataSource.supplementaryViewProvider = { [weak self] collectionview, kind, indexpath in
-			guard let sectionHeader = collectionview.dequeueReusableSupplementaryView(
-				ofKind: kind,
-				withReuseIdentifier: SectionCollectionCell.identifier,
-				for: indexpath) as? SectionCollectionCell else {
-					return nil
-				}
-			
-			guard let app = self?.dataSource.itemIdentifier(for: indexpath) else { return nil }
-			self?.dataSource.snapshot().sectionIdentifier(containingItem: app)
-			return sectionHeader
+			let sections = self?.viewModel.nebulaImages?.result?[indexpath.section].section
+			switch sections {
+			case "Nebula":
+				guard let sectionHeader = collectionview.dequeueReusableSupplementaryView(
+					ofKind: kind,
+					withReuseIdentifier: SectionCollectionCell.identifier,
+					for: indexpath) as? SectionCollectionCell else {
+						return nil
+					}
+				guard let app = self?.dataSource.itemIdentifier(for: indexpath) else { return nil }
+				let section = self?.dataSource.snapshot().sectionIdentifier(containingItem: app)
+				
+				guard !(section?.section?.isEmpty ?? false) else { return nil }
+				sectionHeader.configure(with: section?.section ?? "")
+				return sectionHeader
+			default:
+				return nil
+			}
 		}
 	}
 	
 	private func createCompositionalLayout() -> UICollectionViewLayout {
-		return UICollectionViewLayout()
+		let layout = UICollectionViewCompositionalLayout { [weak self] sectionIndex, _ in
+			let section = self?.viewModel.nebulaImages?.result?[sectionIndex]
+			switch section?.section {
+			default:
+				return self?.createNebulaCollectSection()
+			}
+		}
+		let configure = UICollectionViewCompositionalLayoutConfiguration()
+		configure.interSectionSpacing = 20
+		layout.configuration = configure
+		return layout
 	}
 	
 	private func createCustomCell(indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,7 +113,10 @@ class ViewController: UIViewController {
 	
 	private func createDataSource() -> UserDataSource {
 		UserDataSource(collectionView: collectionView) { [weak self] _, indexPath, _ in
-			return self?.createCustomCell(indexPath: indexPath)
+			switch self?.viewModel.nebulaImages?.result?[indexPath.section].section {
+			default:
+				return self?.createCustomCell(indexPath: indexPath)
+			}
 		}
 	}
 	
