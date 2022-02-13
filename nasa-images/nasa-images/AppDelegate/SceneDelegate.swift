@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let service = NasaImagesService(serviceLayer: ServiceLayer())
         let viewModel = NasaImagesViewModel(service: service)
         let window = UIWindow(windowScene: windowScene)
-        let viewController = ViewController(viewModel: viewModel)
+        let viewController = HomeViewController(viewModel: viewModel)
         let navVc = UINavigationController(rootViewController: viewController)
         window.rootViewController = navVc
         window.makeKeyAndVisible()

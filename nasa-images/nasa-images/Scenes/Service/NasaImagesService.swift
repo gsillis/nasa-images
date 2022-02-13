@@ -8,26 +8,21 @@
 import Foundation
 
 protocol NasaImagesServiceProtocol {
-    func fetchImages(completion: @escaping (AstronomyImages) -> Void )
+	func fetchImages(completion: @escaping (AstrononyImagesResult) -> Void )
 }
 
-class NasaImagesService: NasaImagesServiceProtocol {
-
-    private let serviceLayer: ServiceLayerProtocol
-
-    init(serviceLayer: ServiceLayerProtocol) {
-        self.serviceLayer = serviceLayer
-    }
-
-    func fetchImages(completion: @escaping (AstronomyImages) -> Void) {
-        guard let url = URL(string: Constants.urlPath) else { return }
-        serviceLayer.fetchAstronomyImages(url: url) { response in
-            switch response {
-            case .success(let result):
-                completion(result)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+final class NasaImagesService: NasaImagesServiceProtocol {
+	
+	private let serviceLayer: ServiceLayerProtocol
+	
+	init(serviceLayer: ServiceLayerProtocol) {
+		self.serviceLayer = serviceLayer
+	}
+	
+	func fetchImages(completion: @escaping (AstrononyImagesResult) -> Void) {
+		guard let url = URL(string: Constants.urlPath) else { return }
+		serviceLayer.fetchAstronomyImages(url: url) { response in
+			completion(response)
+		}
+	}
 }

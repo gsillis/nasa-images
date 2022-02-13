@@ -7,8 +7,22 @@
 
 import Foundation
 
-typealias AstronomyImages = [AstronomyImagesModel]
+protocol Model: Decodable, Hashable {}
 
-struct AstronomyImagesModel: Decodable, Equatable {
-    let url, name, detail, id: String?
+struct AstronomyImagesModel: Model {
+	let result: [SectionsModel]?
+	let identifier: UUID = UUID()
+	
+	private enum CodingKeys: String, CodingKey {
+		case result
+	}
+}
+
+struct SectionsModel: Model {
+	let section: String?
+	let nebula: [ImageModel]?
+}
+
+struct ImageModel: Model {
+	let url, name, detail, id: String?
 }

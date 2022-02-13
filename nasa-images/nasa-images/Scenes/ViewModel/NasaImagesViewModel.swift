@@ -8,37 +8,51 @@
 import Foundation
 
 final class NasaImagesViewModel {
-    private var service: NasaImagesServiceProtocol
-    private var astronomyImages: AstronomyImages?
-
-    init(service: NasaImagesServiceProtocol) {
-        self.service = service
-    }
-
-    private func fetchNasaImages() async throws -> AstronomyImages {
-        let images: AstronomyImages = try await withCheckedThrowingContinuation({ continuation in
-
-            service.fetchImages { images in
-                continuation.resume(returning: images)
-            }
-        })
-        return images
-    }
-
-   private func images() {
-        Task {
-            do {
-                let images = try await fetchNasaImages()
-                astronomyImages = images
-            } catch {
-                print("Request failed with error: \(error)")
-            }
-        }
-    }
+	private var service: NasaImagesServiceProtocol
+	var reloadCollectionView: (() -> Void)?
+	
+	var astronomyImagesResult: AstronomyImagesModel? {
+		didSet {
+			reloadCollectionView?()
+		}
+	}
+	
+	var imagesResult: [ImageModel]? {
+		return astronomyImagesResult?.result?.first?.nebula
+	}
+	
+	init(service: NasaImagesServiceProtocol) {
+		self.service = service
+	}
+	
+	private func fetchNasaImages() async throws -> AstronomyImagesModel {
+		let images: AstronomyImagesModel = try await withCheckedThrowingContinuation({ continuation in
+			service.fetchImages { images in
+				switch images {
+				case .success(let result):
+					continuation.resume(returning: result)
+				case .failure(let error):
+					print(error)
+				}
+			}
+		})
+		return images
+	}
+	
+	private func images() {
+		Task {
+			do {
+				let images = try await fetchNasaImages()
+				astronomyImagesResult = images
+			} catch {
+				print("Request failed with error: \(error)")
+			}
+		}
+	}
 }
 
 extension NasaImagesViewModel: NasaImagesViewModelProtocol {
-    func viewDidLoad() {
-        images()
-    }
+	func viewDidLoad() {
+		images()
+	}
 }
