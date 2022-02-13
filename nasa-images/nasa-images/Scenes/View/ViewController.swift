@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 		case main
 	}
 	
-	private typealias UserDataSource = UICollectionViewDiffableDataSource<Section, AstronomyImages>
-	private typealias SnapshotData = NSDiffableDataSourceSnapshot<Section, AstronomyImages>
+	private typealias UserDataSource = UICollectionViewDiffableDataSource<Section, NebulaImagesModel>
+	private typealias SnapshotData = NSDiffableDataSourceSnapshot<Section, NebulaImagesModel>
 	
 	private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
 	private lazy var dataSource: UserDataSource = createDataSource()
