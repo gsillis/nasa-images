@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
 		viewModel.reloadCollectionView = { [weak self] in
 			DispatchQueue.main.async {
 				self?.reloadSnapshotData()
+				self?.collectionView.reloadData()
 			}
 		}
 	}
