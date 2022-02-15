@@ -172,6 +172,24 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		C586B12127BC1DB300DB8745 /* ServiceTest */ = {
+			isa = PBXGroup;
+			children = (
+				C58EAAD827A59EAE0016DEA7 /* ServiceLayerTest.swift */,
+				C585CFD427AEA85B000FB07F /* images.json */,
+			);
+			path = ServiceTest;
+			sourceTree = "<group>";
+		};
+		C586B12227BC1DBC00DB8745 /* UtilsTest */ = {
+			isa = PBXGroup;
+			children = (
+				C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */,
+				C536AFE827B94FEC00A334A7 /* UIColorTest.swift */,
+			);
+			path = UtilsTest;
+			sourceTree = "<group>";
+		};
 		C58EAAB527A59EAC0016DEA7 = {
 			isa = PBXGroup;
 			children = (
@@ -210,10 +228,8 @@
 		C58EAAD727A59EAE0016DEA7 /* nasa-imagesTests */ = {
 			isa = PBXGroup;
 			children = (
-				C58EAAD827A59EAE0016DEA7 /* ServiceLayerTest.swift */,
-				C585CFD427AEA85B000FB07F /* images.json */,
-				C536AFE827B94FEC00A334A7 /* UIColorTest.swift */,
-				C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */,
+				C586B12127BC1DB300DB8745 /* ServiceTest */,
+				C586B12227BC1DBC00DB8745 /* UtilsTest */,
 			);
 			path = "nasa-imagesTests";
 			sourceTree = "<group>";
