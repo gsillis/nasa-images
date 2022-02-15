@@ -17,6 +17,7 @@
 		C564B15427B83F61008ABA28 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C564B15327B83F61008ABA28 /* SectionCollectionCell.swift */; };
 		C585CFD527AEA85B000FB07F /* images.json in Resources */ = {isa = PBXBuildFile; fileRef = C585CFD427AEA85B000FB07F /* images.json */; };
 		C585CFD927AEBA57000FB07F /* NasaImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585CFD827AEBA57000FB07F /* NasaImagesService.swift */; };
+		C586B11F27BBFC4E00DB8745 /* ConstantsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */; };
 		C58EAAC227A59EAC0016DEA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC127A59EAC0016DEA7 /* AppDelegate.swift */; };
 		C58EAAC427A59EAC0016DEA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC327A59EAC0016DEA7 /* SceneDelegate.swift */; };
 		C58EAAC627A59EAC0016DEA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC527A59EAC0016DEA7 /* HomeViewController.swift */; };
@@ -77,6 +78,7 @@
 		C564B15327B83F61008ABA28 /* SectionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionCell.swift; sourceTree = "<group>"; };
 		C585CFD427AEA85B000FB07F /* images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = images.json; sourceTree = "<group>"; };
 		C585CFD827AEBA57000FB07F /* NasaImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesService.swift; sourceTree = "<group>"; };
+		C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTest.swift; sourceTree = "<group>"; };
 		C58EAABE27A59EAC0016DEA7 /* nasa-images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nasa-images.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58EAAC127A59EAC0016DEA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58EAAC327A59EAC0016DEA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C586B12027BC1D2F00DB8745 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C5EA98FD27B5356500403FA2 /* Service */,
+				C58EAAFE27A5ACF00016DEA7 /* ViewModel */,
+				C58EAAF527A5A3A40016DEA7 /* Model */,
+				C58EAAF227A59ED50016DEA7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		C58EAAB527A59EAC0016DEA7 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +213,7 @@
 				C58EAAD827A59EAE0016DEA7 /* ServiceLayerTest.swift */,
 				C585CFD427AEA85B000FB07F /* images.json */,
 				C536AFE827B94FEC00A334A7 /* UIColorTest.swift */,
+				C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */,
 			);
 			path = "nasa-imagesTests";
 			sourceTree = "<group>";
@@ -278,10 +292,7 @@
 		C5EA98FC27B5355C00403FA2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C5EA98FD27B5356500403FA2 /* Service */,
-				C58EAAFE27A5ACF00016DEA7 /* ViewModel */,
-				C58EAAF527A5A3A40016DEA7 /* Model */,
-				C58EAAF227A59ED50016DEA7 /* View */,
+				C586B12027BC1D2F00DB8745 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -306,6 +317,7 @@
 				C58EAABB27A59EAC0016DEA7 /* Frameworks */,
 				C58EAABC27A59EAC0016DEA7 /* Resources */,
 				C58EAAF427A5A0D90016DEA7 /* ShellScript */,
+				7AABD0E15D1A94E8A6A7FBC0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 				C55715DA27B806A200BE807C /* PBXBuildRule */,
@@ -344,6 +356,7 @@
 				C58EAADA27A59EAE0016DEA7 /* Sources */,
 				C58EAADB27A59EAE0016DEA7 /* Frameworks */,
 				C58EAADC27A59EAE0016DEA7 /* Resources */,
+				2EED75683BC55524FE0BBB3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,6 +439,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2EED75683BC55524FE0BBB3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		74121D479085FBEB3D34A577 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +476,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AABD0E15D1A94E8A6A7FBC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images/Pods-nasa-images-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images/Pods-nasa-images-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nasa-images/Pods-nasa-images-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C21456988B6848D984BF93BD /* [CP] Check Pods Manifest.lock */ = {
@@ -536,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C586B11F27BBFC4E00DB8745 /* ConstantsTest.swift in Sources */,
 				C58EAAD927A59EAE0016DEA7 /* ServiceLayerTest.swift in Sources */,
 				C536AFE927B94FEC00A334A7 /* UIColorTest.swift in Sources */,
 			);

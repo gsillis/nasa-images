@@ -5,6 +5,7 @@
 //  Created by Gabriela Sillis on 12/02/22.
 
 import UIKit
+import SDWebImage
 
 protocol NebulaCollectionCellProtocol {
 	func configure(with model: ImageModel)
@@ -29,6 +30,7 @@ final class NebulaCollectionCell: UICollectionViewCell {
 		let label = UILabel()
 		label.font = .systemFont(ofSize: 14, weight: .regular)
 		label.textColor = .white
+		label.numberOfLines = 0
 		return label
 	}()
 	
@@ -59,9 +61,8 @@ final class NebulaCollectionCell: UICollectionViewCell {
 		NSLayoutConstraint.activate([
 			stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
 			stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-			stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
-			stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-			titleLabel.heightAnchor.constraint(equalToConstant: 16)
+			stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+			stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
 		])
 	}
 }
@@ -69,11 +70,8 @@ final class NebulaCollectionCell: UICollectionViewCell {
 extension NebulaCollectionCell: NebulaCollectionCellProtocol {
 	func configure(with model: ImageModel) {
 		titleLabel.text = model.name
-		if let url = URL(string: (model.url ?? "")) {
-			let data = try? Data(contentsOf: url)
-			DispatchQueue.main.async {
-				self.cellIMageView.image = UIImage(data: data!)
-			}
+		if let url = URL(string: model.url ?? "") {
+			cellIMageView.sd_setImage(with: url, completed: nil)
 		}
 	}
 }
