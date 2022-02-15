@@ -11,5 +11,5 @@ protocol NasaImagesViewModelProtocol {
 	func viewDidLoad()
 	var astronomyImagesResult: AstronomyImagesModel? { get }
 	var imagesResult: [ImageModel]? { get }
-	var reloadCollectionView: (() -> Void)? { get set}
+	var reloadCollectionView: (() -> Void)? { get set }
 }
