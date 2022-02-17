@@ -10,6 +10,9 @@
 		09AD6559ECD99918DD185A57 /* Pods_nasa_images.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2112D87682DBEABCAEF645DB /* Pods_nasa_images.framework */; };
 		5E355782E65CA491118C9F13 /* Pods_nasa_imagesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF22738144AB7640864AF2FE /* Pods_nasa_imagesTests.framework */; };
 		6B7D1EF30260EA2B4B525F97 /* Pods_nasa_images_nasa_imagesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54C55F0A80DB187DCD8D6D9 /* Pods_nasa_images_nasa_imagesUITests.framework */; };
+		C536400927BD9AB9001E7317 /* Tests+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536400827BD9AB9001E7317 /* Tests+Extensions.swift */; };
+		C536400E27BF09EF001E7317 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536400D27BF09EF001E7317 /* URLProtocolStub.swift */; };
+		C536401027BF0A43001E7317 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536400F27BF0A43001E7317 /* TestFactories.swift */; };
 		C536AFE927B94FEC00A334A7 /* UIColorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536AFE827B94FEC00A334A7 /* UIColorTest.swift */; };
 		C55715DC27B811E100BE807C /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55715DB27B811E100BE807C /* Preview.swift */; };
 		C55715DE27B812FE00BE807C /* NebulaCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55715DD27B812FE00BE807C /* NebulaCollectionCell.swift */; };
@@ -17,6 +20,7 @@
 		C564B15427B83F61008ABA28 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C564B15327B83F61008ABA28 /* SectionCollectionCell.swift */; };
 		C585CFD527AEA85B000FB07F /* images.json in Resources */ = {isa = PBXBuildFile; fileRef = C585CFD427AEA85B000FB07F /* images.json */; };
 		C585CFD927AEBA57000FB07F /* NasaImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585CFD827AEBA57000FB07F /* NasaImagesService.swift */; };
+		C586B11F27BBFC4E00DB8745 /* ConstantsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */; };
 		C58EAAC227A59EAC0016DEA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC127A59EAC0016DEA7 /* AppDelegate.swift */; };
 		C58EAAC427A59EAC0016DEA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC327A59EAC0016DEA7 /* SceneDelegate.swift */; };
 		C58EAAC627A59EAC0016DEA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAC527A59EAC0016DEA7 /* HomeViewController.swift */; };
@@ -70,6 +74,9 @@
 		77A5886E8B394452E3C7D02E /* Pods-nasa-images-nasa-imagesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasa-images-nasa-imagesUITests.debug.xcconfig"; path = "Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2AA89715021FB2F6B171893 /* Pods-nasa-imagesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasa-imagesTests.debug.xcconfig"; path = "Target Support Files/Pods-nasa-imagesTests/Pods-nasa-imagesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF22738144AB7640864AF2FE /* Pods_nasa_imagesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nasa_imagesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C536400827BD9AB9001E7317 /* Tests+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tests+Extensions.swift"; sourceTree = "<group>"; };
+		C536400D27BF09EF001E7317 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		C536400F27BF0A43001E7317 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		C536AFE827B94FEC00A334A7 /* UIColorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTest.swift; sourceTree = "<group>"; };
 		C55715DB27B811E100BE807C /* Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		C55715DD27B812FE00BE807C /* NebulaCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NebulaCollectionCell.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 		C564B15327B83F61008ABA28 /* SectionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionCell.swift; sourceTree = "<group>"; };
 		C585CFD427AEA85B000FB07F /* images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = images.json; sourceTree = "<group>"; };
 		C585CFD827AEBA57000FB07F /* NasaImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesService.swift; sourceTree = "<group>"; };
+		C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTest.swift; sourceTree = "<group>"; };
 		C58EAABE27A59EAC0016DEA7 /* nasa-images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nasa-images.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58EAAC127A59EAC0016DEA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58EAAC327A59EAC0016DEA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +158,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C536400727BD9AA6001E7317 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C536400827BD9AB9001E7317 /* Tests+Extensions.swift */,
+				C536400F27BF0A43001E7317 /* TestFactories.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C564B15227B83F40008ABA28 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +174,36 @@
 				C564B15327B83F61008ABA28 /* SectionCollectionCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C586B12027BC1D2F00DB8745 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C5EA98FD27B5356500403FA2 /* Service */,
+				C58EAAFE27A5ACF00016DEA7 /* ViewModel */,
+				C58EAAF527A5A3A40016DEA7 /* Model */,
+				C58EAAF227A59ED50016DEA7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C586B12127BC1DB300DB8745 /* ServiceLayerTest */ = {
+			isa = PBXGroup;
+			children = (
+				C58EAAD827A59EAE0016DEA7 /* ServiceLayerTest.swift */,
+				C585CFD427AEA85B000FB07F /* images.json */,
+				C536400D27BF09EF001E7317 /* URLProtocolStub.swift */,
+			);
+			path = ServiceLayerTest;
+			sourceTree = "<group>";
+		};
+		C586B12227BC1DBC00DB8745 /* UtilsTest */ = {
+			isa = PBXGroup;
+			children = (
+				C586B11E27BBFC4E00DB8745 /* ConstantsTest.swift */,
+				C536AFE827B94FEC00A334A7 /* UIColorTest.swift */,
+			);
+			path = UtilsTest;
 			sourceTree = "<group>";
 		};
 		C58EAAB527A59EAC0016DEA7 = {
@@ -197,9 +244,9 @@
 		C58EAAD727A59EAE0016DEA7 /* nasa-imagesTests */ = {
 			isa = PBXGroup;
 			children = (
-				C58EAAD827A59EAE0016DEA7 /* ServiceLayerTest.swift */,
-				C585CFD427AEA85B000FB07F /* images.json */,
-				C536AFE827B94FEC00A334A7 /* UIColorTest.swift */,
+				C536400727BD9AA6001E7317 /* Helpers */,
+				C586B12127BC1DB300DB8745 /* ServiceLayerTest */,
+				C586B12227BC1DBC00DB8745 /* UtilsTest */,
 			);
 			path = "nasa-imagesTests";
 			sourceTree = "<group>";
@@ -278,10 +325,7 @@
 		C5EA98FC27B5355C00403FA2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C5EA98FD27B5356500403FA2 /* Service */,
-				C58EAAFE27A5ACF00016DEA7 /* ViewModel */,
-				C58EAAF527A5A3A40016DEA7 /* Model */,
-				C58EAAF227A59ED50016DEA7 /* View */,
+				C586B12027BC1D2F00DB8745 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -306,6 +350,7 @@
 				C58EAABB27A59EAC0016DEA7 /* Frameworks */,
 				C58EAABC27A59EAC0016DEA7 /* Resources */,
 				C58EAAF427A5A0D90016DEA7 /* ShellScript */,
+				7AABD0E15D1A94E8A6A7FBC0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 				C55715DA27B806A200BE807C /* PBXBuildRule */,
@@ -344,6 +389,7 @@
 				C58EAADA27A59EAE0016DEA7 /* Sources */,
 				C58EAADB27A59EAE0016DEA7 /* Frameworks */,
 				C58EAADC27A59EAE0016DEA7 /* Resources */,
+				2EED75683BC55524FE0BBB3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,6 +472,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2EED75683BC55524FE0BBB3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		74121D479085FBEB3D34A577 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +509,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AABD0E15D1A94E8A6A7FBC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images/Pods-nasa-images-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nasa-images/Pods-nasa-images-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nasa-images/Pods-nasa-images-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C21456988B6848D984BF93BD /* [CP] Check Pods Manifest.lock */ = {
@@ -536,8 +616,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C536401027BF0A43001E7317 /* TestFactories.swift in Sources */,
+				C586B11F27BBFC4E00DB8745 /* ConstantsTest.swift in Sources */,
 				C58EAAD927A59EAE0016DEA7 /* ServiceLayerTest.swift in Sources */,
 				C536AFE927B94FEC00A334A7 /* UIColorTest.swift in Sources */,
+				C536400927BD9AB9001E7317 /* Tests+Extensions.swift in Sources */,
+				C536400E27BF09EF001E7317 /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
