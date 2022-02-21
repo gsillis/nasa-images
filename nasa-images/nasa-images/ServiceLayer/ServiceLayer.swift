@@ -7,17 +7,20 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
+    static func == (lhs: NetworkError, rhs: NetworkError) -> Bool {
+        return true
+    }
+    
 	case badRequest
 	case noData
 	case invalidURL
 	case custom(error: Error)
+    case noConnectivity
 }
 
-typealias  AstrononyImagesResult = Result<AstronomyImagesModel, NetworkError>
-
 protocol ServiceLayerProtocol {
-	func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImagesResult) -> Void)
+	func fetchAstronomyImages(url: URL, completion: @escaping (Result<Data, NetworkError>) -> Void)
 }
 
 final class ServiceLayer: ServiceLayerProtocol {
@@ -27,26 +30,29 @@ final class ServiceLayer: ServiceLayerProtocol {
 		self.urlSession = urlSession
 	}
 	
-	func fetchAstronomyImages(url: URL, completion: @escaping (AstrononyImagesResult) -> Void) {
-		var urlResquest = URLRequest(url: url)
-		urlResquest.httpMethod = "GET"
-		urlSession.dataTask(with: urlResquest) { astrononyImages, _, error in
-			if let error = error {
-				completion(.failure(NetworkError.custom(error: error)))
-				return
-			}
-			
-			guard let dataResult = astrononyImages else {
-				completion(.failure(NetworkError.noData))
-				return
-			}
-			
-			do {
-				let result = try JSONDecoder().decode(AstronomyImagesModel.self, from: dataResult)
-				completion(.success(result))
-			} catch let error {
-				completion(.failure(NetworkError.custom(error: error)))
-			}
-		}.resume()
-	}
+    func fetchAstronomyImages(url: URL, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        var urlResquest = URLRequest(url: url)
+        urlResquest.httpMethod = "GET"
+        urlSession.dataTask(with: urlResquest) { astrononyImages, response, error in
+            var test = self.urlSession
+            if let error = error {
+                completion(.failure(NetworkError.custom(error: error)))
+                return
+            }
+            
+            guard let dataResult = astrononyImages else {
+                completion(.failure(NetworkError.noData))
+                return
+            }
+            
+            let httpResponse = response as? HTTPURLResponse
+            
+            switch httpResponse?.statusCode {
+            case 200:
+                completion(.success(dataResult))
+            default:
+                completion(.failure(NetworkError.badRequest))
+            }
+        }.resume()
+    }
 }
