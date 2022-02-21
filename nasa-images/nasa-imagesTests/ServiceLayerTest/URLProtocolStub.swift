@@ -9,31 +9,31 @@ import Foundation
 
 // Stub 
 class URLProtocolStub: URLProtocol {
-	static var emit: ((URLRequest) -> Void)?
+    static var emit: ((URLRequest) -> Void)?
     static var data: Data?
     static var error: Error?
     static var response: HTTPURLResponse?
-	
-	static func observerRequest(completion: @escaping (URLRequest) -> Void) {
-		URLProtocolStub.emit = completion
-	}
+    
+    static func observerRequest(completion: @escaping (URLRequest) -> Void) {
+        URLProtocolStub.emit = completion
+    }
     
     static func simulatedata(data: Data?, response: HTTPURLResponse?, error: Error?) {
         self.data = data
         self.error = error
         self.response = response
     }
-	
-	override open class func canInit(with request: URLRequest) -> Bool {
-		return true
-	}
-	
-	override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
-		return  request
-	}
-	
-	override open func startLoading() {
-		URLProtocolStub.emit?(request)
+    
+    override open class func canInit(with request: URLRequest) -> Bool {
+        return true
+    }
+    
+    override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        return  request
+    }
+    
+    override open func startLoading() {
+        URLProtocolStub.emit?(request)
         
         if let data = URLProtocolStub.data {
             client?.urlProtocol(self, didLoad: data)
@@ -47,7 +47,7 @@ class URLProtocolStub: URLProtocol {
             client?.urlProtocol(self, didFailWithError: error)
         }
         client?.urlProtocolDidFinishLoading(self)
-	}
-	
-	override open func stopLoading() {}
+    }
+    
+    override open func stopLoading() {}
 }
