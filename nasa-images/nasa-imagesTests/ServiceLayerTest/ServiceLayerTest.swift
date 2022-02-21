@@ -17,11 +17,11 @@ class ServiceLayerTest: XCTestCase {
             XCTAssertEqual("GET", request.httpMethod)
         }
     }
-
+    
     func test_should_complete_with_success_when_request_completes_with_200() {
         expectResult(.success(makeValidData()), when: (makeValidData(), makeResponse(), nil))
     }
-
+    
     func test_should_complete_with_failure_when_request_completes_with_non_200() {
         expectResult(.failure(.badRequest), when: (makeValidData(), makeResponse(statusCode: 400), nil))
     }
