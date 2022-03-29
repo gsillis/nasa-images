@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
 		viewModel.viewDidLoad()
 		configureSubviews()
 		bindUI()
+        collectionView.delegate = self
 	}
 	
 	private func bindUI() {
@@ -175,4 +176,13 @@ class HomeViewController: UIViewController {
 			collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0)
 		])
 	}
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let model = viewModel.imagesResult {
+            let viewController = DetailViewController(model: model[indexPath.item])
+            navigationController?.present(viewController, animated: true)
+        }
+    }
 }
