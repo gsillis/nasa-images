@@ -55,20 +55,20 @@ class HomeViewController: UIViewController {
 	
 	private func reloadSnapshotData() {
 		var snapShot = SnapshotData()
-		guard let section = viewModel.astronomyImagesResult?.result else { return }
+        guard let section = viewModel.astronomyImagesResult?.result else { return }
 		snapShot.appendSections(section)
 		section.forEach { section in
-			guard let item = section.nebula else { return }
-			snapShot.appendItems(item, toSection: section)
+            guard let item = section.object else { return }
+            snapShot.appendItems(item, toSection: section)
 		}
 		dataSource.apply(snapShot)
 	}
 	
 	private func createHeader() {
 		dataSource.supplementaryViewProvider = { [weak self] collectionview, kind, indexpath in
-			let sections = self?.viewModel.astronomyImagesResult?.result?[indexpath.section].section
+            let sections = self?.viewModel.astronomyImagesResult?.result?[indexpath.section].section
 			switch sections {
-			case "Nebula":
+			case "Stars and Nebulas", "Planets":
 				guard let sectionHeader = collectionview.dequeueReusableSupplementaryView(
 					ofKind: kind,
 					withReuseIdentifier: SectionCollectionCell.identifier,
@@ -90,10 +90,12 @@ class HomeViewController: UIViewController {
 	private func createCompositionalLayout() -> UICollectionViewLayout {
 		let layout = UICollectionViewCompositionalLayout { [weak self] sectionIndex, _ in
 			let section = self?.viewModel.astronomyImagesResult?.result?[sectionIndex]
-			switch section?.section {
-			default:
-				return self?.createNebulaCollectSection()
-			}
+            switch section?.section {
+            case "Planets":
+                return self?.createPlanetsCollectionSection()
+            default:
+                return self?.createNebulaCollectionSection()
+            }
 		}
 		let configure = UICollectionViewCompositionalLayoutConfiguration()
 		configure.interSectionSpacing = 20
@@ -101,28 +103,29 @@ class HomeViewController: UIViewController {
 		return layout
 	}
 	
-	private func createCustomCell(indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(
-			withReuseIdentifier: NebulaCollectionCell.identifier,
-			for: indexPath) as? NebulaCollectionCell else {
-				return UICollectionViewCell()
-			}
-		if let model = viewModel.imagesResult?[indexPath.row] {
-			cell.configure(with: model)
-		}
-		return cell
-	}
-	
 	private func createDataSource() -> UserDataSource {
-		UserDataSource(collectionView: collectionView) { [weak self] _, indexPath, _ in
-			switch self?.viewModel.astronomyImagesResult?.result?[indexPath.section].section {
-			default:
-				return self?.createCustomCell(indexPath: indexPath)
-			}
+		UserDataSource(collectionView: collectionView) { [weak self] _, indexPath, model in
+            switch self?.viewModel.astronomyImagesResult?.result?[indexPath.section].section {
+            case "Planets":
+                return self?.createStarsAndNebulasCell(indexPath: indexPath, model: model)
+            default:
+                return self?.createStarsAndNebulasCell(indexPath: indexPath, model: model)
+            }
 		}
 	}
 	
-	private func createNebulaCollectSection() -> NSCollectionLayoutSection {
+    private func createStarsAndNebulasCell(indexPath: IndexPath, model: ImageModel) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: NebulaCollectionCell.identifier,
+            for: indexPath) as? NebulaCollectionCell else {
+                return UICollectionViewCell()
+            }
+        cell.configure(with: model)
+        return cell
+    }
+    
+    
+	private func createNebulaCollectionSection() -> NSCollectionLayoutSection {
 		let itemSize = NSCollectionLayoutSize(
 			widthDimension: .fractionalWidth(1),
 			heightDimension: .fractionalHeight(1)
@@ -146,6 +149,31 @@ class HomeViewController: UIViewController {
 		return layoutSection
 	}
 	
+    private func createPlanetsCollectionSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(1)
+        )
+        let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets(
+            top: 0,
+            leading: 0,
+            bottom: 0,
+            trailing: 0
+            )
+        let layoutGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.9),
+            heightDimension: .estimated(250)
+        )
+        let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
+        let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        let header = createSectionHeader()
+        layoutSection.boundarySupplementaryItems = [header]
+        layoutSection.orthogonalScrollingBehavior = .groupPagingCentered
+        return layoutSection
+    }
+    
+    
 	private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
 		let headerSize = NSCollectionLayoutSize(
 			widthDimension: .fractionalWidth(0.9),
@@ -180,9 +208,8 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let model = viewModel.imagesResult {
-            let viewController = DetailViewController(model: model[indexPath.item])
-            navigationController?.present(viewController, animated: true)
-        }
+        guard let model = dataSource.itemIdentifier(for: indexPath) else { return }
+        let viewController = DetailViewController(model: model)
+        navigationController?.present(viewController, animated: true)
     }
 }
