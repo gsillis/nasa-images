@@ -18,17 +18,14 @@ final class NebulaCollectionCell: UICollectionViewCell {
 	
 	private lazy var cellIMageView: UIImageView = {
 		let image = UIImageView()
-		image.layer.cornerRadius = 8
-		image.layer.borderWidth = 3
-		image.layer.borderColor = UIColor.customBlue.cgColor
-		image.clipsToBounds = true
+        image.setupBorderImage(borderColor: .customBlue)
 		image.contentMode = .scaleAspectFill
 		return image
 	}()
 	
 	private lazy var titleLabel: UILabel = {
 		let label = UILabel()
-		label.font = .systemFont(ofSize: 14, weight: .regular)
+		label.font = .systemFont(ofSize: 15, weight: .regular)
 		label.textColor = .white
 		label.numberOfLines = 0
 		return label

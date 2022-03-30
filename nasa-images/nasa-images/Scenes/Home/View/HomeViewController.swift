@@ -51,6 +51,7 @@ class HomeViewController: UIViewController {
 			withReuseIdentifier: SectionCollectionCell.identifier
 		)
 		collectionView.register(NebulaCollectionCell.self, forCellWithReuseIdentifier: NebulaCollectionCell.identifier)
+        collectionView.register(FeatureCollectionCell.self, forCellWithReuseIdentifier: FeatureCollectionCell.identifier)
 	}
 	
 	private func reloadSnapshotData() {
@@ -68,7 +69,7 @@ class HomeViewController: UIViewController {
 		dataSource.supplementaryViewProvider = { [weak self] collectionview, kind, indexpath in
             let sections = self?.viewModel.astronomyImagesResult?.result?[indexpath.section].section
 			switch sections {
-			case "Stars and Nebulas", "Planets":
+			case "James Webb", "Stars and Nebulas", "Planets":
 				guard let sectionHeader = collectionview.dequeueReusableSupplementaryView(
 					ofKind: kind,
 					withReuseIdentifier: SectionCollectionCell.identifier,
@@ -93,6 +94,8 @@ class HomeViewController: UIViewController {
             switch section?.section {
             case "Planets":
                 return self?.createPlanetsCollectionSection()
+            case "James Webb":
+                return self?.createFeatureCollectionSection()
             default:
                 return self?.createNebulaCollectionSection()
             }
@@ -108,6 +111,8 @@ class HomeViewController: UIViewController {
             switch self?.viewModel.astronomyImagesResult?.result?[indexPath.section].section {
             case "Planets":
                 return self?.createStarsAndNebulasCell(indexPath: indexPath, model: model)
+            case "James Webb":
+                return self?.createFeatureCell(indexPath: indexPath, model: model)
             default:
                 return self?.createStarsAndNebulasCell(indexPath: indexPath, model: model)
             }
@@ -124,6 +129,15 @@ class HomeViewController: UIViewController {
         return cell
     }
     
+    private func createFeatureCell(indexPath: IndexPath, model: ImageModel) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: FeatureCollectionCell.identifier,
+            for: indexPath) as? FeatureCollectionCell else {
+                return UICollectionViewCell()
+            }
+        cell.configure(with: model)
+        return cell
+    }
     
 	private func createNebulaCollectionSection() -> NSCollectionLayoutSection {
 		let itemSize = NSCollectionLayoutSize(
@@ -163,7 +177,7 @@ class HomeViewController: UIViewController {
             )
         let layoutGroupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.9),
-            heightDimension: .estimated(250)
+            heightDimension: .estimated(300)
         )
         let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
@@ -173,6 +187,29 @@ class HomeViewController: UIViewController {
         return layoutSection
     }
     
+    private func createFeatureCollectionSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(1)
+        )
+        let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets(
+            top: 0,
+            leading: 0,
+            bottom: 0,
+            trailing: 0
+            )
+        let layoutGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.9),
+            heightDimension: .estimated(300)
+        )
+        let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
+        let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        let header = createSectionHeader()
+        layoutSection.boundarySupplementaryItems = [header]
+        layoutSection.orthogonalScrollingBehavior = .groupPagingCentered
+        return layoutSection
+    }
     
 	private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
 		let headerSize = NSCollectionLayoutSize(

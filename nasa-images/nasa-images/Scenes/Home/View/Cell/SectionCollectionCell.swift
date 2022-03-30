@@ -20,10 +20,17 @@ final class SectionCollectionCell: UICollectionViewCell {
 		let label = UILabel()
 		label.translatesAutoresizingMaskIntoConstraints = false
 		label.textColor = .customBlue
-		label.font = .systemFont(ofSize: 24, weight: .semibold)
+		label.font = .systemFont(ofSize: 30, weight: .bold)
 		label.textAlignment = .left
 		return label
 	}()
+    
+    private let separatorView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .quaternaryLabel
+        return view
+    }()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -38,13 +45,18 @@ final class SectionCollectionCell: UICollectionViewCell {
 	private func configureSubviews() {
 		self.backgroundColor = .customDarkBlue
 		contentView.addSubview(titleLabel)
+        contentView.addSubview(separatorView)
 	}
 	
 	private func configureConstraints() {
 		NSLayoutConstraint.activate([
-			titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-			titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-			titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            separatorView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            separatorView.heightAnchor.constraint(equalToConstant: 2),
+            separatorView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            separatorView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            
+			titleLabel.leadingAnchor.constraint(equalTo: separatorView.leadingAnchor),
+			titleLabel.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 10),
 			titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
 		])
 	}
@@ -63,6 +75,7 @@ struct SectionCollectionCellPreview: PreviewProvider {
 	static var previews: some View {
 		Preview {
 			let view = SectionCollectionCell()
+            view.configure(with: "Section")
 			return view
 		}
 		.previewLayout(
