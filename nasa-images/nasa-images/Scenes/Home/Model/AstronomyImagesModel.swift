@@ -20,7 +20,7 @@ struct AstronomyImagesModel: Model {
 
 struct SectionsModel: Model {
 	let section: String?
-	let nebula: [ImageModel]?
+	let object: [ImageModel]?
 }
 
 struct ImageModel: Model {

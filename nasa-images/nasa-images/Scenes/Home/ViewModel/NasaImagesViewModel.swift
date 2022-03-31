@@ -18,7 +18,7 @@ final class NasaImagesViewModel {
 	}
 	
 	var imagesResult: [ImageModel]? {
-		return astronomyImagesResult?.result?.first?.nebula
+		return astronomyImagesResult?.result?.first?.object
 	}
 	
 	init(service: NasaImagesServiceProtocol) {

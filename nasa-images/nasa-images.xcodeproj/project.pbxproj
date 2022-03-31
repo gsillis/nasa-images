@@ -35,6 +35,8 @@
 		C58EAAFC27A5A6EE0016DEA7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAFB27A5A6EE0016DEA7 /* Constants.swift */; };
 		C58EAB0027A5AD100016DEA7 /* NasaImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAAFF27A5AD100016DEA7 /* NasaImagesViewModel.swift */; };
 		C58EAB0227A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EAB0127A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift */; };
+		C5AB7A6927F49CAB009EF521 /* FeatureCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB7A6827F49CAB009EF521 /* FeatureCollectionCell.swift */; };
+		C5EE2CA127F5F76300458387 /* PlanetsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE2CA027F5F76300458387 /* PlanetsCollectionCell.swift */; };
 		C5FE8B0927F38F8D0057FA48 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FE8B0827F38F8C0057FA48 /* DetailView.swift */; };
 		C5FE8B0B27F38F9B0057FA48 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FE8B0A27F38F9B0057FA48 /* DetailViewController.swift */; };
 		C5FE8B0D27F3917D0057FA48 /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FE8B0C27F3917D0057FA48 /* UIIMageView+Extensions.swift */; };
@@ -107,6 +109,8 @@
 		C58EAAFB27A5A6EE0016DEA7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C58EAAFF27A5AD100016DEA7 /* NasaImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesViewModel.swift; sourceTree = "<group>"; };
 		C58EAB0127A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesViewModelProtocol.swift; sourceTree = "<group>"; };
+		C5AB7A6827F49CAB009EF521 /* FeatureCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionCell.swift; sourceTree = "<group>"; };
+		C5EE2CA027F5F76300458387 /* PlanetsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCollectionCell.swift; sourceTree = "<group>"; };
 		C5FE8B0827F38F8C0057FA48 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		C5FE8B0A27F38F9B0057FA48 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C5FE8B0C27F3917D0057FA48 /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 			children = (
 				C55715DD27B812FE00BE807C /* NebulaCollectionCell.swift */,
 				C564B15327B83F61008ABA28 /* SectionCollectionCell.swift */,
+				C5AB7A6827F49CAB009EF521 /* FeatureCollectionCell.swift */,
+				C5EE2CA027F5F76300458387 /* PlanetsCollectionCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				C584353827C45595008585B4 /* NetworkError.swift in Sources */,
 				C58EAB0227A5B27E0016DEA7 /* NasaImagesViewModelProtocol.swift in Sources */,
 				C55715DC27B811E100BE807C /* Preview.swift in Sources */,
+				C5AB7A6927F49CAB009EF521 /* FeatureCollectionCell.swift in Sources */,
 				C585CFD927AEBA57000FB07F /* NasaImagesService.swift in Sources */,
 				C58EAAC627A59EAC0016DEA7 /* HomeViewController.swift in Sources */,
 				C58EAAFA27A5A4530016DEA7 /* ServiceLayer.swift in Sources */,
@@ -623,6 +630,7 @@
 				C58EAAC227A59EAC0016DEA7 /* AppDelegate.swift in Sources */,
 				C58EAB0027A5AD100016DEA7 /* NasaImagesViewModel.swift in Sources */,
 				C58EAAC427A59EAC0016DEA7 /* SceneDelegate.swift in Sources */,
+				C5EE2CA127F5F76300458387 /* PlanetsCollectionCell.swift in Sources */,
 				C5FE8B0927F38F8D0057FA48 /* DetailView.swift in Sources */,
 				C58EAAFC27A5A6EE0016DEA7 /* Constants.swift in Sources */,
 			);
