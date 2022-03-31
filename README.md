@@ -9,8 +9,8 @@ Projeto criado para estudo de criação de Collection View usando Compositional 
 
 # Bibliotecas
 - SwiftLint
-- Snapshot Testing
+- SDWebImage
 
 # Testes
 - Testes unitários com XCTest 
-- Testes de UI com Snapshot Testing
+
