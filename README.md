@@ -4,6 +4,10 @@
 
 Projeto criado para estudo de criação de Collection View usando Compositional Layout e Testes Unitários e de UI.
 
+
+https://user-images.githubusercontent.com/63265472/161144470-f2437012-5c1e-49b5-977a-aa2c3a0f4ed9.mp4
+
+
 # Arquitetura
 - MVVM
 
