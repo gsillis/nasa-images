@@ -50,8 +50,18 @@ class HomeViewController: UIViewController {
 			forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
 			withReuseIdentifier: SectionCollectionCell.identifier
 		)
-		collectionView.register(NebulaCollectionCell.self, forCellWithReuseIdentifier: NebulaCollectionCell.identifier)
-        collectionView.register(FeatureCollectionCell.self, forCellWithReuseIdentifier: FeatureCollectionCell.identifier)
+		collectionView.register(
+            NebulaCollectionCell.self,
+            forCellWithReuseIdentifier: NebulaCollectionCell.identifier
+        )
+        collectionView.register(
+            FeatureCollectionCell.self,
+            forCellWithReuseIdentifier: FeatureCollectionCell.identifier
+        )
+        collectionView.register(
+            PlanetsCollectionCell.self,
+            forCellWithReuseIdentifier: PlanetsCollectionCell.identifier
+        )
 	}
 	
 	private func reloadSnapshotData() {
@@ -110,7 +120,7 @@ class HomeViewController: UIViewController {
 		UserDataSource(collectionView: collectionView) { [weak self] _, indexPath, model in
             switch self?.viewModel.astronomyImagesResult?.result?[indexPath.section].section {
             case "Planets":
-                return self?.createStarsAndNebulasCell(indexPath: indexPath, model: model)
+                return self?.createPlanetsCell(indexPath: indexPath, model: model)
             case "James Webb":
                 return self?.createFeatureCell(indexPath: indexPath, model: model)
             default:
@@ -139,6 +149,16 @@ class HomeViewController: UIViewController {
         return cell
     }
     
+    private func createPlanetsCell(indexPath: IndexPath, model: ImageModel) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: PlanetsCollectionCell.identifier,
+            for: indexPath) as? PlanetsCollectionCell else {
+                return UICollectionViewCell()
+            }
+        cell.configure(with: model)
+        return cell
+    }
+    
 	private func createNebulaCollectionSection() -> NSCollectionLayoutSection {
 		let itemSize = NSCollectionLayoutSize(
 			widthDimension: .fractionalWidth(1),
@@ -153,7 +173,7 @@ class HomeViewController: UIViewController {
 			)
 		let layoutGroupSize = NSCollectionLayoutSize(
 			widthDimension: .fractionalWidth(0.9),
-			heightDimension: .estimated(400)
+			heightDimension: .estimated(450)
 		)
 		let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
 		let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
@@ -166,18 +186,18 @@ class HomeViewController: UIViewController {
     private func createPlanetsCollectionSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .fractionalHeight(1)
+            heightDimension: .fractionalHeight(0.4)
         )
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
         layoutItem.contentInsets = NSDirectionalEdgeInsets(
-            top: 0,
-            leading: 0,
-            bottom: 0,
-            trailing: 0
+            top: 10,
+            leading: 10,
+            bottom: 10,
+            trailing: 5
             )
         let layoutGroupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.9),
-            heightDimension: .estimated(300)
+            heightDimension: .fractionalHeight(0.3)
         )
         let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
