@@ -188,6 +188,23 @@
 			path = SnapshotTests;
 			sourceTree = "<group>";
 		};
+		C57AA3A227F8B12300B75F52 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C57AA3A327F8B13600B75F52 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C57AA3A327F8B13600B75F52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5FE8B0827F38F8C0057FA48 /* DetailView.swift */,
+				C5FE8B0A27F38F9B0057FA48 /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C586B12027BC1D2F00DB8745 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,8 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				C586B12027BC1D2F00DB8745 /* Home */,
-				C5FE8B0827F38F8C0057FA48 /* DetailView.swift */,
-				C5FE8B0A27F38F9B0057FA48 /* DetailViewController.swift */,
+				C57AA3A227F8B12300B75F52 /* Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
