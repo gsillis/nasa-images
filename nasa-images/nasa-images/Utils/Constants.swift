@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constants {
-	static let urlPath = "https://demo7038364.mockable.io/images"
+    static let urlPath = "https://demo7038364.mockable.io/images"
 }

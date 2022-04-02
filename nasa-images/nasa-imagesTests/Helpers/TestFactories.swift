@@ -9,7 +9,7 @@ import Foundation
 @testable import nasa_images
 
 func makeURL() -> URL {
-	return URL(string: "http://any-url.com")!
+    return URL(string: "http://any-url.com")!
 }
 
 func makeValidData() -> Data {
