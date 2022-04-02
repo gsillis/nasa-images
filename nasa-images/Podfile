@@ -15,6 +15,7 @@ pod 'SDWebImage'
 
   target 'nasa-imagesUITests' do
     # Pods for testing
+pod 'SnapshotTesting', '~> 1.9.0'
   end
 
 end
