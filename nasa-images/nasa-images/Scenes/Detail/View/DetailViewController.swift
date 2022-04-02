@@ -28,6 +28,13 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewInstance?.delegate(self)
         viewInstance?.configure(with: model)
+    }
+}
+
+extension DetailViewController: DetailViewDelegate {
+    func closeButtonTapped() {
+        dismiss(animated: true, completion: nil)
     }
 }

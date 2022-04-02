@@ -10,9 +10,15 @@ import SDWebImage
 
 protocol DetailViewProtocol {
     func configure(with data: ImageModel?)
+    func delegate(_ delegate: DetailViewDelegate?)
+}
+
+protocol DetailViewDelegate: AnyObject {
+    func closeButtonTapped()
 }
 
 final class DetailView: UIView {
+    private weak var delegate: DetailViewDelegate?
     
     private lazy var astronomyImage: UIImageView = {
         let image = UIImageView()
@@ -53,6 +59,13 @@ final class DetailView: UIView {
         return stack
     }()
     
+    private lazy var closeButton: UIButton = {
+        let button = UIButton(type: .close)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureSubviews()
@@ -66,12 +79,15 @@ final class DetailView: UIView {
     private func configureSubviews() {
         backgroundColor = .customDarkBlue
         addSubview(scrollView)
+        addSubview(closeButton)
         scrollView.addSubview(stackView)
     }
     
     private func configureConstraints() {
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            closeButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
+            closeButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            scrollView.topAnchor.constraint(equalTo: closeButton.bottomAnchor, constant: 30),
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -32),
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
@@ -85,6 +101,10 @@ final class DetailView: UIView {
 }
 
 extension DetailView: DetailViewProtocol {
+    func delegate(_ delegate: DetailViewDelegate?) {
+        self.delegate = delegate
+    }
+    
     func configure(with model: ImageModel?) {
         guard let model = model else { return }
         if let url = URL(string: model.url ?? "") {
@@ -92,6 +112,13 @@ extension DetailView: DetailViewProtocol {
         }
         titleLabel.text = model.name
         detailLabel.text = model.detail
+    }
+}
+
+@objc
+extension DetailView {
+    func closeButtonTapped() {
+        self.delegate?.closeButtonTapped()
     }
 }
 
