@@ -24,3 +24,12 @@ func makeResponse(statusCode: Int = 200 ) -> HTTPURLResponse {
         headerFields: nil
     )!
 }
+
+func makeViewModel() -> ImageModel {
+    return ImageModel(
+        url: "Any_URL",
+        name: "Mercury",
+        detail: "",
+        id: ""
+    )
+}
