@@ -14,7 +14,9 @@ https://user-images.githubusercontent.com/63265472/161144470-f2437012-5c1e-49b5-
 # Bibliotecas
 - SwiftLint
 - SDWebImage
+- Snapshot Testing
 
 # Testes
 - Testes unitários com XCTest 
+- Testes de UI com Snapshot Testing
 
