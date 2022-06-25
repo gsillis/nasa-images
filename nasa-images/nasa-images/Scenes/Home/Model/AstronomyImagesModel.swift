@@ -25,4 +25,6 @@ struct SectionsModel: Model {
 
 struct ImageModel: Model {
     let url, name, detail, id: String?
+    let imageName: String = "nebula"
+    
 }

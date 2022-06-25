@@ -70,6 +70,8 @@ extension FeatureCollectionCell: FeatureCollectionCellProtocol {
         titleLabel.text = model.name
         if let url = URL(string: model.url ?? "") {
             cellIMageView.sd_setImage(with: url, completed: nil)
+        }else {
+            cellIMageView.image = UIImage(named: model.imageName)
         }
     }
 }
