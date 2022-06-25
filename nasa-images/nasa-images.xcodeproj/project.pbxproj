@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3ED94946A9A915796978C6CE /* Pods_nasa_images.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBACB78BB2E29716360322D /* Pods_nasa_images.framework */; };
 		47206457415B36CD8F9873DA /* Pods_nasa_imagesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D4410997E6B9EFA07D4357 /* Pods_nasa_imagesTests.framework */; };
+		C50337A12867B6F90095939B /* NasaImagesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50337A02867B6F90095939B /* NasaImagesServiceTests.swift */; };
 		C536400927BD9AB9001E7317 /* Tests+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536400827BD9AB9001E7317 /* Tests+Extensions.swift */; };
 		C536400E27BF09EF001E7317 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536400D27BF09EF001E7317 /* URLProtocolStub.swift */; };
 		C536401027BF0A43001E7317 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536400F27BF0A43001E7317 /* TestFactories.swift */; };
@@ -73,6 +74,7 @@
 		5EA43DD847208C6F658A3F1A /* Pods-nasa-images-nasa-imagesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasa-images-nasa-imagesUITests.debug.xcconfig"; path = "Target Support Files/Pods-nasa-images-nasa-imagesUITests/Pods-nasa-images-nasa-imagesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79CD14CDB229E3A615A84C98 /* Pods-nasa-imagesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasa-imagesTests.debug.xcconfig"; path = "Target Support Files/Pods-nasa-imagesTests/Pods-nasa-imagesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94D4410997E6B9EFA07D4357 /* Pods_nasa_imagesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nasa_imagesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C50337A02867B6F90095939B /* NasaImagesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImagesServiceTests.swift; sourceTree = "<group>"; };
 		C536400827BD9AB9001E7317 /* Tests+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tests+Extensions.swift"; sourceTree = "<group>"; };
 		C536400D27BF09EF001E7317 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		C536400F27BF0A43001E7317 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -160,7 +162,7 @@
 		C503379C2867B5EF0095939B /* ScenesTests */ = {
 			isa = PBXGroup;
 			children = (
-				C503379D2867B6070095939B /* ViewTests */,
+				C503379E2867B6CE0095939B /* HomeTests */,
 			);
 			path = ScenesTests;
 			sourceTree = "<group>";
@@ -171,6 +173,23 @@
 				C57AA39127F8979A00B75F52 /* SnapshotTests */,
 			);
 			path = ViewTests;
+			sourceTree = "<group>";
+		};
+		C503379E2867B6CE0095939B /* HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C503379F2867B6E40095939B /* ServiceTests */,
+				C503379D2867B6070095939B /* ViewTests */,
+			);
+			path = HomeTests;
+			sourceTree = "<group>";
+		};
+		C503379F2867B6E40095939B /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				C50337A02867B6F90095939B /* NasaImagesServiceTests.swift */,
+			);
+			path = ServiceTests;
 			sourceTree = "<group>";
 		};
 		C536400727BD9AA6001E7317 /* Helpers */ = {
@@ -610,6 +629,7 @@
 				C536401027BF0A43001E7317 /* TestFactories.swift in Sources */,
 				C586B11F27BBFC4E00DB8745 /* ConstantsTest.swift in Sources */,
 				C58EAAD927A59EAE0016DEA7 /* ServiceLayerTest.swift in Sources */,
+				C50337A12867B6F90095939B /* NasaImagesServiceTests.swift in Sources */,
 				C57AA3A127F8A69600B75F52 /* SectionCollectionCellSnapshotTest.swift in Sources */,
 				C536AFE927B94FEC00A334A7 /* UIColorTest.swift in Sources */,
 				C57AA39D27F8A40D00B75F52 /* NebulaCollectionCellSnapshotTest.swift in Sources */,
