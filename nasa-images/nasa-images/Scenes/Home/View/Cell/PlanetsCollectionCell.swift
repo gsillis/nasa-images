@@ -73,6 +73,8 @@ extension PlanetsCollectionCell: PlanetsCollectionCellProtocol {
         titleLabel.text = model.name
         if let url = URL(string: model.url ?? "") {
             cellIMageView.sd_setImage(with: url, completed: nil)
+        }else {
+            cellIMageView.image = UIImage(named: model.imageName)
         }
     }
 }
@@ -84,12 +86,6 @@ struct PlanetsViewPreview: PreviewProvider {
     static var previews: some View {
         Preview {
             let view = PlanetsCollectionCell()
-            view.configure(with: ImageModel(
-                url: "https://solarsystem.nasa.gov/system/resources/detail_files/439_MercurySubtleColors1200w.jpg",
-                name: "Mercury",
-                detail: "",
-                id: ""
-            ))
             return view
         }
         .previewLayout(
