@@ -157,6 +157,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C503379C2867B5EF0095939B /* ScenesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C503379D2867B6070095939B /* ViewTests */,
+			);
+			path = ScenesTests;
+			sourceTree = "<group>";
+		};
+		C503379D2867B6070095939B /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				C57AA39127F8979A00B75F52 /* SnapshotTests */,
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
 		C536400727BD9AA6001E7317 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +287,7 @@
 		C58EAAD727A59EAE0016DEA7 /* nasa-imagesTests */ = {
 			isa = PBXGroup;
 			children = (
-				C57AA39127F8979A00B75F52 /* SnapshotTests */,
+				C503379C2867B5EF0095939B /* ScenesTests */,
 				C536400727BD9AA6001E7317 /* Helpers */,
 				C586B12127BC1DB300DB8745 /* ServiceLayerTest */,
 				C586B12227BC1DBC00DB8745 /* UtilsTest */,
