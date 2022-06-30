@@ -27,9 +27,9 @@ func makeResponse(statusCode: Int = 200 ) -> HTTPURLResponse {
 
 func makeViewModel() -> ImageModel {
     return ImageModel(
-        url: "Any_URL",
-        name: "Mercury",
-        detail: "",
+        url: nil,
+        name: "nebula",
+        detail: "nebula",
         id: ""
     )
 }
