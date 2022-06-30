@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NasaImagesServiceProtocol {
-    func fetchImages(completion: @escaping (Result<AstronomyImagesModel, NetworkError>) -> Void )
+    func fetchImages(completion: @escaping (Result<AstronomyImagesModel, NetworkError>) -> Void)
 }
 
 final class NasaImagesService: NasaImagesServiceProtocol {
@@ -27,11 +27,11 @@ final class NasaImagesService: NasaImagesServiceProtocol {
                 do {
                     let result = try JSONDecoder().decode(AstronomyImagesModel.self, from: data)
                     completion(.success(result))
-                } catch let error {
-                    completion(.failure(NetworkError.custom(error: error)))
+                } catch {
+                    completion(.failure(.noData))
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                completion(.failure(.custom(error: error)))
             }
         }
     }
